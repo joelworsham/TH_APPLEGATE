@@ -1,0 +1,23 @@
+/*
+Styles page.php.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+#site-header {
+  #bucket-menu {
+    height: 50px;
+  }
+}
+
+// Contractors
+body.bucket-contractors {
+
+  #site-header, #site-footer {
+    .gutter {
+      background: $bucket-contractors;
+    }
+  }
+}

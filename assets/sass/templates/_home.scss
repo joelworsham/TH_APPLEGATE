@@ -1,0 +1,118 @@
+/*
+Styles page.php.
+
+@since 0.1.0
+*/
+
+@import "../settings";
+
+$section-gutter: 50px;
+$icon-size: 75px;
+
+body.home {
+  #home-buckets {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .bucket {
+      color: #F2F2F2;
+      border: 3px solid;
+      position: relative;
+      text-align: center;
+      transition: color 300ms;
+      z-index: 1;
+
+      &:hover {
+        z-index: 2;
+
+        &:nth-child(1) {
+          color: #F75353;
+
+          .button {
+            background: #F75353;
+          }
+        }
+        &:nth-child(2) {
+          color: #469C62;
+
+          .button {
+            background: #469C62;
+          }
+        }
+        &:nth-child(3) {
+          color: #AEBC62;
+
+          .button {
+            background: #AEBC62;
+          }
+        }
+        &:nth-child(4) {
+          color: #6878EB;
+
+          .button {
+            background: #6878EB;
+          }
+        }
+      }
+
+      .bucket-icon {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: $icon-size;
+        height: $icon-size;
+        margin-top: - ($icon-size / 2) - 3px; // 3px accommodates border
+        margin-left: - ($icon-size / 2);
+        border-radius: 50%;
+        background: $light-color;
+        padding: 5px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 10%;
+          top: 10%;
+          display: block;
+          border: 3px solid;
+          border-radius: 50%;
+          width: 80%;
+          height: 80%;
+        }
+
+        .fa {
+          display: inline-block;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 25px;
+        }
+      }
+
+      .bucket-title {
+        padding-top: $icon-size / 2;
+        font-size: 0.8em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $dark-color;
+        white-space: nowrap;
+
+        a {
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  #home-cta {
+    .columns {
+      border: 3px solid darken($body-bg, 5%);
+      padding: 5px;
+    }
+
+    .button {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+}

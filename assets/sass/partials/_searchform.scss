@@ -1,0 +1,19 @@
+/*
+Searchform.
+
+@since 0.1.0
+*/
+@import "../settings";
+@import "../../vendor/sass/foundation/components/forms";
+
+.search-form {
+
+  input[type="search"] {
+    border: none;
+  }
+
+  button {
+    background: darken($light-color, 10%);
+    height: ($input-font-size + ($form-spacing * 1.5) - rem-calc(1));
+  }
+}

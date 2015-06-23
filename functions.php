@@ -200,6 +200,8 @@ require_once __DIR__ . '/includes/theme-functions.php';
 require_once __DIR__ . '/includes/shortcodes/button.php';
 require_once __DIR__ . '/includes/shortcodes/contact.php';
 require_once __DIR__ . '/includes/shortcodes/style.php';
+require_once __DIR__ . '/includes/shortcodes/foundation.php';
+require_once __DIR__ . '/includes/shortcodes/social.php';
 
 // Include widgets
 require_once __DIR__ . '/includes/widgets/image.php';

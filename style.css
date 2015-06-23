@@ -2627,22 +2627,6 @@ throughout this theme's SASS files.
   border-bottom: 3px solid #72BF44; }
   #site-header .logo {
     width: 150px; }
-  #site-header .social .icon {
-    display: inline-block;
-    margin: 0 0.1em; }
-  #site-header .social .fa {
-    display: table-cell;
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    color: #fff; }
-  #site-header .social .fa-facebook {
-    background: #3F5D9A; }
-  #site-header .social .fa-linkedin {
-    background: #0077B5; }
-  #site-header .social .fa-youtube {
-    background: #DE2825; }
   #site-header .top-nav {
     margin: 0 1em; }
     #site-header .top-nav .menu {
@@ -2652,7 +2636,7 @@ throughout this theme's SASS files.
       color: #fff;
       font-size: 0.8em; }
       #site-header .top-nav .menu-item:not(:first-of-type):before {
-        content: ' | ';
+        content: '|';
         margin: 0 0.5em; }
       #site-header .top-nav .menu-item a {
         color: inherit; }
@@ -2750,6 +2734,9 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
+.page-content {
+  margin: 30px 0; }
+
 /*
 Styles page.php.
 
@@ -2761,11 +2748,40 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
-#site-header #bucket-menu {
-  height: 50px; }
+.bucket-gutter {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.8em; }
+  .bucket-gutter a {
+    color: inherit; }
+  .bucket-gutter .left {
+    margin-right: 0.5em;
+    margin-top: 6px; }
+  .bucket-gutter .fa {
+    font-size: 0.5em;
+    width: 30px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid #fff; }
+  .bucket-gutter.bucket-contractors {
+    background: #F75353; }
 
-body.bucket-contractors #site-header .gutter, body.bucket-contractors #site-footer .gutter {
-  background: #F75353; }
+.bucket-menu {
+  margin-top: 10px; }
+  .bucket-menu .menu {
+    font-size: 0.8em;
+    color: #999;
+    font-weight: bold; }
+  .bucket-menu .menu-item {
+    display: inline-block; }
+    .bucket-menu .menu-item:not(:first-of-type):before {
+      content: '|';
+      margin: 0 0.5em; }
+    .bucket-menu .menu-item a {
+      color: inherit; }
 
 /*
 Styles single.php.
@@ -2893,21 +2909,19 @@ throughout this theme's SASS files.
   color: #fff;
   width: 1.7em;
   height: 1.7em;
-  line-height: 1.7em;
+  line-height: 1.7em !important;
   margin-left: 0.1em;
   margin-right: 0.1em; }
   [class*="social-icon-"][class*="small"] {
-    font-size: 1.1em; }
+    font-size: 0.8em; }
   [class*="social-icon-"][class*="medium"] {
-    font-size: 1.6em; }
+    font-size: 1em; }
   [class*="social-icon-"][class*="large"] {
-    font-size: 3em; }
+    font-size: 2em; }
   [class*="social-icon-"][class*="facebook"] {
     background: #3B579D; }
-  [class*="social-icon-"][class*="twitter"] {
-    background: #2AA9E0; }
-  [class*="social-icon-"][class*="googleplus"] {
-    background: #DC4A38; }
+  [class*="social-icon-"][class*="linkedin"] {
+    background: #0077B5; }
   [class*="social-icon-"][class*="youtube"] {
     background: #DD2C28; }
 

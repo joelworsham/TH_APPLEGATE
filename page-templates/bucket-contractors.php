@@ -18,7 +18,15 @@ get_header();
 the_post();
 ?>
 
-<!-- Page HTML -->
+	<section id="page-<?php the_ID(); ?>" <?php body_class( array( 'page-content' ) ); ?>>
+		<div class="row">
+			<div class="small-12 columns">
+				<div class="page-copy">
+					<?php the_content(); ?>
+				</div>
+			</div>
+		</div>
+	</section>
 
 <?php
 get_footer();

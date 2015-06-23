@@ -15,38 +15,8 @@ get_header();
 
 the_post();
 
-$buckets = array(
-	array(
-		'title'   => 'Contractors & Professionals',
-		'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
-		'icon'    => 'wrench',
-		'link'    => '/contractors-professionals/',
-		'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
-	),
-	array(
-		'title'   => 'Architects & Specifiers',
-		'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
-		'icon'    => 'bar-chart',
-		'link'    => '#',
-		'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
-	),
-	array(
-		'title'   => 'Building Officials',
-		'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
-		'icon'    => 'building',
-		'link'    => '#',
-		'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
-	),
-	array(
-		'title'   => 'Home Owners',
-		'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
-		'icon'    => 'home',
-		'link'    => '#',
-		'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
-	),
-);
+$buckets = get_buckets();
 ?>
-
 	<section id="home-content" class="page-content text-center">
 		<div class="row collapse">
 			<div class="columns small-12">

@@ -14,34 +14,6 @@ The static site header.
     width: 150px;
   }
 
-  .social {
-    .icon {
-      display: inline-block;
-      margin: 0 0.1em;
-    }
-
-    .fa {
-      display: table-cell;
-      vertical-align: middle;
-      width: 30px;
-      height: 30px;
-      text-align: center;
-      color: #fff;
-    }
-
-    .fa-facebook {
-      background: #3F5D9A;
-    }
-
-    .fa-linkedin {
-      background: #0077B5;
-    }
-
-    .fa-youtube {
-      background: #DE2825;
-    }
-  }
-
   .top-nav {
     margin: 0 1em;
 
@@ -55,7 +27,7 @@ The static site header.
       font-size: 0.8em;
 
       &:not(:first-of-type):before {
-        content: ' | ';
+        content: '|';
         margin: 0 0.5em;
       }
 

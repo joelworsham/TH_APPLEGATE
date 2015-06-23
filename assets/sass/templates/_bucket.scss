@@ -3,21 +3,57 @@ Styles page.php.
 
 @since 0.1.0
 */
-
 @import "../settings";
 
-#site-header {
-  #bucket-menu {
-    height: 50px;
+.bucket-gutter {
+  color: $light-color;
+  font-weight: bold;
+  font-size: 1.8em;
+
+  a {
+    color: inherit;
+  }
+
+  .left {
+    margin-right: 0.5em;
+    margin-top: 6px;
+  }
+
+  .fa {
+    font-size: 0.5em;
+    width: 30px;
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid $light-color;
+  }
+
+  &.bucket-contractors {
+    background: $bucket-contractors;
   }
 }
 
-// Contractors
-body.bucket-contractors {
+.bucket-menu {
+  margin-top: 10px;
 
-  #site-header, #site-footer {
-    .gutter {
-      background: $bucket-contractors;
+  .menu {
+    font-size: 0.8em;
+    color: #999;
+    font-weight: bold;
+  }
+
+  .menu-item {
+    display: inline-block;
+
+    &:not(:first-of-type):before {
+      content: '|';
+      margin: 0 0.5em;
+    }
+
+    a {
+      color: inherit;
     }
   }
 }

@@ -32,3 +32,58 @@ function _applegate_body_class( $classes ) {
 function applegate_get_current_template() {
 	return isset( $GLOBALS['current_theme_template'] ) ? $GLOBALS['current_theme_template'] : false;
 }
+
+function get_buckets() {
+
+	return $buckets = array(
+		'contractors' => array(
+			'title'   => 'Contractors & Professionals',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'wrench',
+			'link'    => '/contractors-professionals/',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
+		'architects' => array(
+			'title'   => 'Architects & Specifiers',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'bar-chart',
+			'link'    => '#',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
+		'building' => array(
+			'title'   => 'Building Officials',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'building',
+			'link'    => '#',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
+		'home' => array(
+			'title'   => 'Home Owners',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'home',
+			'link'    => '#',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
+	);
+}
+
+add_filter( 'the_content', 'tgm_io_shortcode_empty_paragraph_fix' );
+/**
+ * Filters the content to remove any extra paragraph or break tags
+ * caused by shortcodes.
+ *
+ * @since 1.0.0
+ *
+ * @param string $content  String of HTML content.
+ * @return string $content Amended string of HTML content.
+ */
+function tgm_io_shortcode_empty_paragraph_fix( $content ) {
+
+	$array = array(
+		'<p>['    => '[',
+		']</p>'   => ']',
+		']<br />' => ']'
+	);
+	return strtr( $content, $array );
+
+}

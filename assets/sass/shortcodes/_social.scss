@@ -6,9 +6,9 @@ Social shortcodes.
 
 @import "../settings";
 
-$social-icon-small-base: 1.1em;
-$social-icon-medium-base: 1.6em;
-$social-icon-large-base: 3em;
+$social-icon-small-base: 0.8em;
+$social-icon-medium-base: 1em;
+$social-icon-large-base: 2em;
 
 [class*="social-icon-"] {
   display: inline-block;
@@ -17,7 +17,7 @@ $social-icon-large-base: 3em;
   color: #fff;
   width: 1.7em;
   height: 1.7em;
-  line-height: 1.7em;
+  line-height: 1.7em !important;
   margin-left: 0.1em;
   margin-right: 0.1em;
 
@@ -37,12 +37,8 @@ $social-icon-large-base: 3em;
     background: #3B579D;
   }
 
-  &[class*="twitter"] {
-    background: #2AA9E0;
-  }
-
-  &[class*="googleplus"] {
-    background: #DC4A38;
+  &[class*="linkedin"] {
+    background: #0077B5;
   }
 
   &[class*="youtube"] {

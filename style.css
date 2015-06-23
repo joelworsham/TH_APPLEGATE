@@ -2695,12 +2695,20 @@ throughout this theme's SASS files.
       padding: 0 0.5em; }
     #site-footer .primary-nav .menu-item {
       float: left;
-      padding: 0.5em 1em;
       border-right: 3px solid #fff; }
+      #site-footer .primary-nav .menu-item:hover {
+        background: #5e9e3f;
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVlOWUzZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMDFlMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5e9e3f), color-stop(100%, #101e0b));
+        background: -webkit-linear-gradient(top, #5e9e3f 0%, #101e0b 100%);
+        background: linear-gradient(to bottom, #5e9e3f 0%, #101e0b 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e9e3f', endColorstr='#101e0b',GradientType=0 ); }
       #site-footer .primary-nav .menu-item:first-of-type {
         border-left: 3px solid #fff; }
       #site-footer .primary-nav .menu-item a {
-        color: inherit; }
+        display: block;
+        color: inherit;
+        padding: 0.5em 1em; }
   #site-footer .footer-menu {
     color: #b3b3b3;
     font-size: 0.7em;

@@ -2775,7 +2775,7 @@ throughout this theme's SASS files.
     border-radius: 50%;
     border: 2px solid #fff; }
   .bucket-gutter.bucket-contractors {
-    background: #F75353; }
+    background: #B80611; }
 
 .bucket-menu {
   margin-top: 10px; }
@@ -2838,21 +2838,21 @@ body.home #home-buckets {
     body.home #home-buckets .bucket:hover {
       z-index: 2; }
       body.home #home-buckets .bucket:hover:nth-child(1) {
-        color: #F75353; }
+        color: #B80611; }
         body.home #home-buckets .bucket:hover:nth-child(1) .button {
-          background: #F75353; }
+          background: #B80611; }
       body.home #home-buckets .bucket:hover:nth-child(2) {
-        color: #469C62; }
+        color: #094E96; }
         body.home #home-buckets .bucket:hover:nth-child(2) .button {
-          background: #469C62; }
+          background: #094E96; }
       body.home #home-buckets .bucket:hover:nth-child(3) {
-        color: #AEBC62; }
+        color: #B9771B; }
         body.home #home-buckets .bucket:hover:nth-child(3) .button {
-          background: #AEBC62; }
+          background: #B9771B; }
       body.home #home-buckets .bucket:hover:nth-child(4) {
-        color: #6878EB; }
+        color: #4A3750; }
         body.home #home-buckets .bucket:hover:nth-child(4) .button {
-          background: #6878EB; }
+          background: #4A3750; }
     body.home #home-buckets .bucket .bucket-icon {
       position: absolute;
       top: 0;

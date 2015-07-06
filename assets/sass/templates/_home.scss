@@ -3,7 +3,6 @@ Styles page.php.
 
 @since 0.1.0
 */
-
 @import "../settings";
 
 $section-gutter: 50px;
@@ -26,31 +25,31 @@ body.home {
         z-index: 2;
 
         &:nth-child(1) {
-          color: #F75353;
+          color: $bucket-contractors;
 
           .button {
-            background: #F75353;
+            background: $bucket-contractors;
           }
         }
         &:nth-child(2) {
-          color: #469C62;
+          color: $bucket-architects;
 
           .button {
-            background: #469C62;
+            background: $bucket-architects;
           }
         }
         &:nth-child(3) {
-          color: #AEBC62;
+          color: $bucket-building;
 
           .button {
-            background: #AEBC62;
+            background: $bucket-building;
           }
         }
         &:nth-child(4) {
-          color: #6878EB;
+          color: $bucket-home;
 
           .button {
-            background: #6878EB;
+            background: $bucket-home;
           }
         }
       }

@@ -101,4 +101,18 @@ The static site footer.
       }
     }
   }
+
+  .nav-menu-small {
+    .accordion-navigation {
+      margin-bottom: 10px !important;
+
+      > a {
+        background: lighten($dark-color, 15%);
+      }
+
+      > .content{
+        background: transparent;
+      }
+    }
+  }
 }

@@ -716,6 +716,34 @@ th.hide-for-touch {
   th.show-for-print {
     display: table-cell !important; } }
 
+.accordion {
+  margin-bottom: 0; }
+  .accordion:before, .accordion:after {
+    content: " ";
+    display: table; }
+  .accordion:after {
+    clear: both; }
+  .accordion .accordion-navigation, .accordion dd {
+    display: block;
+    margin-bottom: 0 !important; }
+    .accordion .accordion-navigation.active > a, .accordion dd.active > a {
+      background: #e8e8e8; }
+    .accordion .accordion-navigation > a, .accordion dd > a {
+      background: #EFEFEF;
+      color: #222222;
+      padding: 1rem;
+      display: block;
+      font-family: "Helvetica", sans-serif;
+      font-size: 1rem; }
+      .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
+        background: #e3e3e3; }
+    .accordion .accordion-navigation > .content, .accordion dd > .content {
+      display: none;
+      padding: 0.9375rem; }
+      .accordion .accordion-navigation > .content.active, .accordion dd > .content.active {
+        display: block;
+        background: #FFFFFF; }
+
 /* Clearing Styles */
 .clearing-thumbs, [data-clearing] {
   margin-bottom: 0;
@@ -2652,6 +2680,8 @@ throughout this theme's SASS files.
     color: #fff;
     font-style: italic;
     font-size: 0.8em; }
+    #site-header .bible-verse a {
+      color: inherit; }
 
 /*
 The static site body.
@@ -2730,6 +2760,12 @@ throughout this theme's SASS files.
         font-weight: bold;
         cursor: default;
         font-size: 1.2em; }
+  #site-footer .nav-menu-small .accordion-navigation {
+    margin-bottom: 10px !important; }
+    #site-footer .nav-menu-small .accordion-navigation > a {
+      background: #292929; }
+    #site-footer .nav-menu-small .accordion-navigation > .content {
+      background: transparent; }
 
 /*
 Styles shared among all templates.

@@ -29,28 +29,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="footer-menu">
 		<div class="row">
-			<div class="small-12 columns">
+
+			<!-- Default footer -->
+			<div class="small-12 columns show-for-medium-up">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'footer',
 					'container'      => false,
-					'menu_class'     => 'nav-menu',
-				) )
+					'menu_class' => 'nav-menu',
+				) );
 				?>
 			</div>
-		</div>
 
-		<!--		<div class="copyright small-12 columns">-->
-		<!--			<p class="left">-->
-		<!--				&copy; --><?php //echo date( 'Y' ); ?><!-- Applegate-->
-		<!--			</p>-->
-		<!---->
-		<!--			<p class="right">-->
-		<!--				<a href="/about-this-site/">-->
-		<!--					About this site-->
-		<!--				</a>-->
-		<!--			</p>-->
-		<!--		</div>-->
+			<!-- Small screen footer -->
+			<div class="small-12 columns hide-for-medium-up">
+				<?php
+				require_once __DIR__ . '/includes/class-applegate-walker-footernav.php';
+
+				wp_nav_menu( array(
+					'theme_location' => 'footer',
+					'container'      => false,
+					'menu_class' => 'nav-menu-small accordion',
+					'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion>%3$s</ul>',
+					'walker' => new Applegate_Walker_FooterNav(),
+				) );
+				?>
+			</div>
+
+		</div>
 	</div>
 </footer>
 

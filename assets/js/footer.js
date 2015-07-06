@@ -10,7 +10,8 @@
     $(function () {
 
        // Clicking on menu labels should do nothing
-       $('#site-footer').find('.menu .nav-menu > li > a').click(function (e) {
+       $('#site-footer').find('a[href="#"]').click(function (e) {
+
            e = e || event;
            e.preventDefault();
            return false;

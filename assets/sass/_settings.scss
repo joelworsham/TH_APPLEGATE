@@ -62,6 +62,37 @@ $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 // Grid
 $row-width: rem-calc(1000);
 
+// Buttons
+$button-function-factor: -10%;
+$button-border-width: 2;
+$button-border-style: solid;
+$button-font-color: $primary-color;
+$button-bg-color: transparent;
+$button-bg-hover: transparent;
+$button-border-color: $primary-color;
+$button-border-hover: scale-color($primary-color, $lightness: $button-function-factor);
+$secondary-button-bg-color: transparent;
+$secondary-button-bg-hover: transparent;
+$secondary-button-border-color: $light-color;
+$secondary-button-border-hover: scale-color($light-color, $lightness: $button-function-factor);
+$success-button-bg-color: transparent;
+$success-button-bg-hover: transparent;
+$success-button-border-color: darken($light-color, 10%);
+$success-button-border-hover: scale-color($success-color, $lightness: $button-function-factor);
+$alert-button-border-hover: scale-color($alert-color, $lightness: $button-function-factor);
+$alert-button-bg-color: transparent;
+$alert-button-bg-hover: transparent;
+$alert-button-border-color: scale-color($alert-color, $lightness: $button-function-factor);
+$alert-button-border-hover: scale-color($alert-color, $lightness: $button-function-factor);
+$warning-button-bg-color: transparent;
+$warning-button-bg-hover: transparent;
+$warning-button-border-color: scale-color($warning-color, $lightness: $button-function-factor);
+$warning-button-border-hover: scale-color($warning-color, $lightness: $button-function-factor);
+$info-button-bg-color: transparent;
+$info-button-bg-hover: transparent;
+$info-button-border-color: scale-color($info-color, $lightness: $button-function-factor);
+$info-button-border-hover: scale-color($info-color, $lightness: $button-function-factor);
+
 // Media query ranges
 $small-range: (0em, 40em);
 $medium-range: (40.063em, 64em);

@@ -3,8 +3,8 @@ Base element settings (no classes or id's).
 
 @since 0.1.0
 */
-
 @import "settings";
+@import "../vendor/sass/foundation/components/buttons";
 
 a {
   &.color-invert {
@@ -16,11 +16,70 @@ a {
   }
 }
 
+// Ghost buttons
+button, .button {
+  transition: border 300ms, color 300ms, background-color 300ms;
+
+  &.fill {
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+
+    &:hover {
+      background-color: darken($primary-color, 5%);
+      color: $light-color;
+    }
+  }
+
+  &:hover {
+    border-color: $button-border-hover;
+    color: $button-border-hover;
+  }
+
+  &.secondary {
+    color: $light-color;
+
+    &:hover {
+      border-color: $secondary-button-border-hover;
+      color: $secondary-button-border-hover;
+    }
+  }
+
+  &.warning {
+    &:hover {
+      border-color: $warning-button-border-hover;
+      color: $warning-button-border-hover;
+    }
+  }
+
+  &.info {
+    &:hover {
+      border-color: $info-button-border-hover;
+      color: $info-button-border-hover;
+    }
+  }
+
+  &.alert {
+    &:hover {
+      border-color: $alert-button-border-hover;
+      color: $alert-button-border-hover;
+    }
+  }
+
+  &.success {
+    &:hover {
+      border-color: $success-button-border-hover;
+      color: $success-button-border-hover;
+    }
+  }
+}
+
 // Select color
 ::selection {
   background: $primary-color;
   @include light-or-dark-text($primary-color);
- }
+}
+
 ::-moz-selection {
   background: $primary-color;
   @include light-or-dark-text($primary-color);

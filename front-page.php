@@ -63,8 +63,26 @@ $buckets = get_buckets();
 	<section id="home-cta">
 		<div class="row">
 			<div class="columns small-12">
-				<a href="#" class="button large expand">
+				<a href="#" class="button fill large expand">
 					Applegate Insulation Cellulose and Cotton Product Catalog
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="home-products">
+		<div class="row">
+			<div class="columns small-12 medium-6">
+				<img src="" />
+			</div>
+
+			<div class="columns small-12 medium-6 medium-text-right">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/products.png" />
+			</div>
+
+			<div class="vertical-center columns small-12 medium-6">
+				<a href="#" class="button secondary large">
+					View Our Products
 				</a>
 			</div>
 		</div>

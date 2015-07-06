@@ -55,5 +55,9 @@ The static site header.
     color: $light-color;
     font-style: italic;
     font-size: 0.8em;
+
+    a {
+      color: inherit;
+    }
   }
 }

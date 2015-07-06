@@ -2871,24 +2871,25 @@ body.home #home-buckets {
     -webkit-transition: color 300ms;
             transition: color 300ms;
     z-index: 1; }
-    body.home #home-buckets .bucket:hover {
-      z-index: 2; }
-      body.home #home-buckets .bucket:hover:nth-child(1) {
-        color: #B80611; }
-        body.home #home-buckets .bucket:hover:nth-child(1) .button {
-          background: #B80611; }
-      body.home #home-buckets .bucket:hover:nth-child(2) {
-        color: #094E96; }
-        body.home #home-buckets .bucket:hover:nth-child(2) .button {
-          background: #094E96; }
-      body.home #home-buckets .bucket:hover:nth-child(3) {
-        color: #B9771B; }
-        body.home #home-buckets .bucket:hover:nth-child(3) .button {
-          background: #B9771B; }
-      body.home #home-buckets .bucket:hover:nth-child(4) {
-        color: #4A3750; }
-        body.home #home-buckets .bucket:hover:nth-child(4) .button {
-          background: #4A3750; }
+    @media only screen and (min-width:40.063em) {
+      body.home #home-buckets .bucket:hover {
+        z-index: 2; } }
+    body.home #home-buckets .bucket:hover:nth-child(1) {
+      color: #B80611; }
+      body.home #home-buckets .bucket:hover:nth-child(1) .button {
+        background: #B80611; }
+    body.home #home-buckets .bucket:hover:nth-child(2) {
+      color: #094E96; }
+      body.home #home-buckets .bucket:hover:nth-child(2) .button {
+        background: #094E96; }
+    body.home #home-buckets .bucket:hover:nth-child(3) {
+      color: #B9771B; }
+      body.home #home-buckets .bucket:hover:nth-child(3) .button {
+        background: #B9771B; }
+    body.home #home-buckets .bucket:hover:nth-child(4) {
+      color: #4A3750; }
+      body.home #home-buckets .bucket:hover:nth-child(4) .button {
+        background: #4A3750; }
     body.home #home-buckets .bucket .bucket-icon {
       position: absolute;
       top: 0;
@@ -2923,8 +2924,7 @@ body.home #home-buckets {
       font-size: 0.8em;
       font-weight: bold;
       text-transform: uppercase;
-      color: #030303;
-      white-space: nowrap; }
+      color: #030303; }
       body.home #home-buckets .bucket .bucket-title a {
         color: inherit; }
 body.home #home-cta .columns, body.home #home-cta #site-footer .footer-menu .nav-menu > .menu-item, #site-footer .footer-menu body.home #home-cta .nav-menu > .menu-item {

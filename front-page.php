@@ -38,7 +38,7 @@ $buckets = get_buckets();
 
 		<div class="row">
 			<?php foreach ( $buckets as $bucket ) : ?>
-				<div class="bucket columns small-12 large-3">
+				<div class="bucket columns small-12 medium-3">
 					<div class="bucket-icon">
 						<div class="fa fa-<?php echo $bucket['icon']; ?>"></div>
 					</div>

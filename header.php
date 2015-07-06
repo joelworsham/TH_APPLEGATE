@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</header>
 
-	<?php if ( ( $template = applegate_get_current_template() ) && strpos( $template, 'bucket-' ) !== - 1 ): ?>
+	<?php if ( ( $template = applegate_get_current_template() ) && strpos( $template, 'bucket-' ) !== false ): ?>
 		<?php
 		$bucket_parent_ID = get_the_ID();
 

@@ -161,6 +161,7 @@ add_action( 'wp_enqueue_scripts', function () {
 add_action( 'after_setup_theme', function () {
 
 	register_nav_menu( 'primary', 'Primary Menu' );
+	register_nav_menu( 'error-404', 'Error 404' );
 	register_nav_menu( 'header-top', 'Header Top Menu' );
 	register_nav_menu( 'footer', 'Footer Menu' );
 } );

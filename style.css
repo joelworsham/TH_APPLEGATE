@@ -3055,6 +3055,7 @@ body.home #home-buckets {
     text-align: center;
     -webkit-transition: color 300ms;
             transition: color 300ms;
+    cursor: pointer;
     z-index: 1; }
     @media only screen and (min-width:40.063em) {
       body.home #home-buckets .bucket:hover {

@@ -1,0 +1,42 @@
+/*
+Adds some functionality to foundation.
+
+@since 0.1.0
+*/
+@import "settings";
+
+// Float class names
+$float-class-names: small-only,
+small,
+medium-only,
+medium,
+large-only,
+large,
+xlarge-only,
+xlarge,
+xxlarge-only,
+xxlarge;
+
+// Float breakpoints
+$float-class-breakpoints: $small-only,
+$small-up,
+$medium-only,
+$medium-up,
+$large-only,
+$large-up,
+$xlarge-only,
+$xlarge-up,
+$xxlarge-only,
+$xxlarge-up;
+
+// Media query floats
+@for $i from 1 through length($float-class-names) {
+  @media #{(nth($float-class-breakpoints, $i))} {
+    .#{(nth($float-class-names, $i))}-left {
+      float: left !important;
+    }
+    .#{(nth($float-class-names, $i))}-right {
+      float: right !important;
+    }
+  }
+}

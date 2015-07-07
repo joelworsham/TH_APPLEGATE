@@ -34,20 +34,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<header id="site-header">
 		<div class="row">
-			<div class="logo left">
+			<div class="logo medium-left small-only-text-center">
 				<a href="<?php bloginfo( 'url' ); ?>">
 					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-medium.png"/>
 				</a>
 			</div>
 
-			<div class="container right">
+			<div class="container medium-right small-only-text-center">
 				<div class="row">
 					<div class="columns small-12">
-						<div class="right">
+						<div class="medium-right">
 							<?php get_search_form(); ?>
 						</div>
 
-						<nav class="top-nav right">
+						<nav class="top-nav medium-right">
 							<?php
 							wp_nav_menu( array(
 								'theme_location' => 'header-top',
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							?>
 						</nav>
 
-						<div class="social right">
+						<div class="social medium-right">
 							<?php
 							echo applegate_sc_facebook();
 							echo applegate_sc_linkedin();
@@ -66,11 +66,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 				</div>
 
-				<div class="phone">
+				<div class="phone medium-text-right">
 					<?php echo applegate_sc_phone(); ?>
 				</div>
 
-				<div class="bible-verse">
+				<div class="bible-verse medium-text-right">
 					<?php dynamic_sidebar( 'header-bible-verse' ); ?>
 				</div>
 			</div>

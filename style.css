@@ -2579,6 +2579,77 @@ label.error {
   color: #f04124; }
 
 /*
+Adds some functionality to foundation.
+
+@since 0.1.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 0.1.0
+*/
+@media only screen and (max-width: 40em) {
+  .small-only-left {
+    float: left !important; }
+  .small-only-right {
+    float: right !important; } }
+
+@media only screen {
+  .small-left {
+    float: left !important; }
+  .small-right {
+    float: right !important; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .medium-only-left {
+    float: left !important; }
+  .medium-only-right {
+    float: right !important; } }
+
+@media only screen and (min-width:40.063em) {
+  .medium-left {
+    float: left !important; }
+  .medium-right {
+    float: right !important; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .large-only-left {
+    float: left !important; }
+  .large-only-right {
+    float: right !important; } }
+
+@media only screen and (min-width:64.063em) {
+  .large-left {
+    float: left !important; }
+  .large-right {
+    float: right !important; } }
+
+@media only screen and (min-width:90.063em) and (max-width:120em) {
+  .xlarge-only-left {
+    float: left !important; }
+  .xlarge-only-right {
+    float: right !important; } }
+
+@media only screen and (min-width:90.063em) {
+  .xlarge-left {
+    float: left !important; }
+  .xlarge-right {
+    float: right !important; } }
+
+@media only screen and (min-width:120.063em) and (max-width:99999999em) {
+  .xxlarge-only-left {
+    float: left !important; }
+  .xxlarge-only-right {
+    float: right !important; } }
+
+@media only screen and (min-width:120.063em) {
+  .xxlarge-left {
+    float: left !important; }
+  .xxlarge-right {
+    float: right !important; } }
+
+/*
 Base element settings (no classes or id's).
 
 @since 0.1.0
@@ -2589,13 +2660,15 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden; } }
+
 a.color-invert {
   color: inherit; }
   a.color-invert:hover {
     color: #62a639; }
-
-.row, #site-footer .footer-menu .nav-menu {
-  overflow-x: hidden; }
 
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
@@ -2676,8 +2749,12 @@ throughout this theme's SASS files.
   background: #030303;
   padding: 1em 0.5em;
   border-bottom: 3px solid #72BF44; }
-  #site-header .logo {
-    width: 150px; }
+  @media only screen and (max-width: 40em) {
+    #site-header .logo {
+      margin-bottom: 10px; } }
+  #site-header .logo a {
+    width: 150px;
+    display: inline-block; }
   #site-header .top-nav {
     margin: 0 1em; }
     #site-header .top-nav .menu {
@@ -2694,12 +2771,10 @@ throughout this theme's SASS files.
   #site-header .search-form .search-field {
     width: 100%; }
   #site-header .phone {
-    text-align: right;
     color: #fff;
     font-weight: bold;
     font-size: 2em; }
   #site-header .bible-verse {
-    text-align: right;
     color: #fff;
     font-style: italic;
     font-size: 0.8em; }

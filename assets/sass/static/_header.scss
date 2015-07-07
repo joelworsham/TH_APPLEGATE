@@ -11,7 +11,15 @@ The static site header.
   border-bottom: 3px solid $primary-color;
 
   .logo {
-    width: 150px;
+
+    @media #{$small-only} {
+      margin-bottom: 10px;
+    }
+
+    a {
+      width: 150px;
+      display: inline-block;
+    }
   }
 
   .top-nav {
@@ -44,14 +52,12 @@ The static site header.
   }
 
   .phone {
-    text-align: right;
     color: $light-color;
     font-weight: bold;
     font-size: 2em;
   }
 
   .bible-verse {
-    text-align: right;
     color: $light-color;
     font-style: italic;
     font-size: 0.8em;

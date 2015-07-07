@@ -3,7 +3,7 @@ Theme Name: Applegate
 Description: A kick-butt theme for Applegate.
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com
-Version: 0.1.2
+Version: 1.0.1
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -2713,30 +2713,44 @@ a.color-invert {
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }
+  button:hover, .button:hover {
+    border-color: #66ae3b;
+    color: #66ae3b; }
+  button:active, button:focus, .button:active, .button:focus {
+    color: inherit; }
   button.fill, .button.fill {
     background-color: #72BF44;
     color: #fff;
     border: none; }
+    button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
+      color: #fff; }
     button.fill:hover, .button.fill:hover {
       background-color: #66ae3c;
       color: #fff; }
-  button:hover, .button:hover {
-    border-color: #66ae3b;
-    color: #66ae3b; }
   button.secondary, .button.secondary {
     color: #fff; }
+    button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
+      color: #fff; }
     button.secondary:hover, .button.secondary:hover {
       border-color: #e6e6e6;
       color: #e6e6e6; }
+  button.warning:active, button.warning:focus, .button.warning:active, .button.warning:focus {
+    color: #e87c10; }
   button.warning:hover, .button.warning:hover {
     border-color: #e87c10;
     color: #e87c10; }
+  button.info:active, button.info:focus, .button.info:active, .button.info:focus {
+    color: #80c4e0; }
   button.info:hover, .button.info:hover {
     border-color: #80c4e0;
     color: #80c4e0; }
+  button.alert:active, button.alert:focus, .button.alert:active, .button.alert:focus {
+    color: #e82f10; }
   button.alert:hover, .button.alert:hover {
     border-color: #e82f10;
     color: #e82f10; }
+  button.success:active, button.success:focus, .button.success:active, .button.success:focus {
+    color: transparent; }
   button.success:hover, .button.success:hover {
     border-color: #3c9b5f;
     color: #3c9b5f; }
@@ -2874,7 +2888,7 @@ throughout this theme's SASS files.
             border-top: 3px solid #fff; } }
         #site-footer .primary-nav .menu > .menu-item:hover .sub-menu {
           display: block; }
-        #site-footer .primary-nav .menu > .menu-item:hover a {
+        #site-footer .primary-nav .menu > .menu-item:hover > a {
           background: #5e9e3f;
           background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzVlOWUzZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxMDFlMGIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
           background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5e9e3f), color-stop(100%, #101e0b));
@@ -3041,6 +3055,7 @@ body.home #home-buckets {
     text-align: center;
     -webkit-transition: color 300ms;
             transition: color 300ms;
+    cursor: pointer;
     z-index: 1; }
     @media only screen and (min-width:40.063em) {
       body.home #home-buckets .bucket:hover {
@@ -3147,6 +3162,8 @@ throughout this theme's SASS files.
   line-height: 1.7em !important;
   margin-left: 0.1em;
   margin-right: 0.1em; }
+  [class*="social-icon-"]:hover, [class*="social-icon-"]:active, [class*="social-icon-"]:focus {
+    color: #fff; }
   [class*="social-icon-"][class*="small"] {
     font-size: 0.8em; }
   [class*="social-icon-"][class*="medium"] {
@@ -3155,10 +3172,16 @@ throughout this theme's SASS files.
     font-size: 2em; }
   [class*="social-icon-"][class*="facebook"] {
     background: #3B579D; }
+    [class*="social-icon-"][class*="facebook"]:hover {
+      background: #344d8a; }
   [class*="social-icon-"][class*="linkedin"] {
     background: #0077B5; }
+    [class*="social-icon-"][class*="linkedin"]:hover {
+      background: #00669c; }
   [class*="social-icon-"][class*="youtube"] {
     background: #DD2C28; }
+    [class*="social-icon-"][class*="youtube"]:hover {
+      background: #cb2420; }
 
 /*
 Searchform.

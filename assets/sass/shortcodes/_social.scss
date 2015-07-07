@@ -21,6 +21,10 @@ $social-icon-large-base: 2em;
   margin-left: 0.1em;
   margin-right: 0.1em;
 
+  &:hover, &:active, &:focus {
+    color: #fff;
+  }
+
   &[class*="small"] {
     font-size: $social-icon-small-base;
   }
@@ -35,13 +39,25 @@ $social-icon-large-base: 2em;
 
   &[class*="facebook"] {
     background: #3B579D;
+
+    &:hover {
+      background: darken(#3B579D, 5%);
+    }
   }
 
   &[class*="linkedin"] {
     background: #0077B5;
+
+    &:hover {
+      background: darken(#0077B5, 5%);
+    }
   }
 
   &[class*="youtube"] {
     background: #DD2C28;
+
+    &:hover {
+      background: darken(#DD2C28, 5%);
+    }
   }
 }

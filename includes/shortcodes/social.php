@@ -23,25 +23,28 @@ function applegate_sc_facebook( $atts = array() ) {
 
 	$atts = shortcode_atts( array(
 		'size' => 'medium',
+		'link' => '#',
 	), $atts );
 
-	return "<span class=\"social-icon-facebook-$atts[size] fa fa-facebook\"></span>";
+	return "<a href=\"$atts[link]\" class=\"social-icon-facebook-$atts[size] fa fa-facebook\"></a>";
 }
 
 function applegate_sc_linkedin( $atts = array() ) {
 
 	$atts = shortcode_atts( array(
 		'size' => 'medium',
+		'link' => '#',
 	), $atts );
 
-	return "<span class=\"social-icon-linkedin-$atts[size] fa fa-linkedin\"></span>";
+	return "<a href=\"$atts[link]\" class=\"social-icon-linkedin-$atts[size] fa fa-linkedin\"></a>";
 }
 
 function applegate_sc_youtube( $atts = array() ) {
 
 	$atts = shortcode_atts( array(
 		'size' => 'medium',
+		'link' => '#',
 	), $atts );
 
-	return "<span class=\"social-icon-youtube-$atts[size] fa fa-youtube\"></span>";
+	return "<a href=\"$atts[link]\" class=\"social-icon-youtube-$atts[size] fa fa-youtube\"></a>";
 }

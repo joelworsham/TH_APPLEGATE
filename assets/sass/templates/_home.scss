@@ -19,6 +19,7 @@ body.home {
       position: relative;
       text-align: center;
       transition: color 300ms;
+      cursor: pointer;
       z-index: 1;
 
       &:hover {

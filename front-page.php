@@ -81,7 +81,7 @@ $buckets = get_buckets();
 			</div>
 
 			<div class="vertical-center columns small-12 medium-6">
-				<a href="#" class="button secondary large">
+				<a href="#" class="button secondary large small-only-expand">
 					View Our Products
 				</a>
 			</div>

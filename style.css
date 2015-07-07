@@ -2649,6 +2649,46 @@ throughout this theme's SASS files.
   .xxlarge-right {
     float: right !important; } }
 
+@media only screen and (max-width: 40em) {
+  .button.small-only-expand {
+    width: 100%; } }
+
+@media only screen {
+  .button.small-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:40.063em) and (max-width:64em) {
+  .button.medium-only-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:40.063em) {
+  .button.medium-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:64.063em) and (max-width:90em) {
+  .button.large-only-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:64.063em) {
+  .button.large-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:90.063em) and (max-width:120em) {
+  .button.xlarge-only-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:90.063em) {
+  .button.xlarge-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:120.063em) and (max-width:99999999em) {
+  .button.xxlarge-only-expand {
+    width: 100%; } }
+
+@media only screen and (min-width:120.063em) {
+  .button.xxlarge-expand {
+    width: 100%; } }
+
 /*
 Base element settings (no classes or id's).
 
@@ -3067,6 +3107,9 @@ body.home #home-products {
     opacity: 0.4; }
   body.home #home-products .button {
     margin: 0; }
+  @media only screen and (max-width: 40em) {
+    body.home #home-products .vertical-center {
+      margin-top: 0 !important; } }
 
 /*
 Social shortcodes.

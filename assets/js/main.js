@@ -14,7 +14,7 @@
         }
     });
 
-    $(function () {
+    $(window).load(function () {
        $('.vertical-center').each(function () {
            $(this).css('margin-top', ($(this).parent().height() / 2) - ($(this).height() / 2));
        });

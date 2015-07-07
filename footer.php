@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'container'      => false,
+				'depth' => 2,
 			) );
 			?>
 		</div>
@@ -37,6 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					'theme_location' => 'footer',
 					'container'      => false,
 					'menu_class' => 'nav-menu',
+					'depth' => 3,
 				) );
 				?>
 			</div>
@@ -52,6 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					'menu_class' => 'nav-menu-small accordion',
 					'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion>%3$s</ul>',
 					'walker' => new Applegate_Walker_FooterNav(),
+					'depth' => 3,
 				) );
 				?>
 			</div>

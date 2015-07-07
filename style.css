@@ -2713,30 +2713,44 @@ a.color-invert {
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }
+  button:hover, .button:hover {
+    border-color: #66ae3b;
+    color: #66ae3b; }
+  button:active, button:focus, .button:active, .button:focus {
+    color: inherit; }
   button.fill, .button.fill {
     background-color: #72BF44;
     color: #fff;
     border: none; }
+    button.fill:active, button.fill:focus, .button.fill:active, .button.fill:focus {
+      color: #fff; }
     button.fill:hover, .button.fill:hover {
       background-color: #66ae3c;
       color: #fff; }
-  button:hover, .button:hover {
-    border-color: #66ae3b;
-    color: #66ae3b; }
   button.secondary, .button.secondary {
     color: #fff; }
+    button.secondary:active, button.secondary:focus, .button.secondary:active, .button.secondary:focus {
+      color: #fff; }
     button.secondary:hover, .button.secondary:hover {
       border-color: #e6e6e6;
       color: #e6e6e6; }
+  button.warning:active, button.warning:focus, .button.warning:active, .button.warning:focus {
+    color: #e87c10; }
   button.warning:hover, .button.warning:hover {
     border-color: #e87c10;
     color: #e87c10; }
+  button.info:active, button.info:focus, .button.info:active, .button.info:focus {
+    color: #80c4e0; }
   button.info:hover, .button.info:hover {
     border-color: #80c4e0;
     color: #80c4e0; }
+  button.alert:active, button.alert:focus, .button.alert:active, .button.alert:focus {
+    color: #e82f10; }
   button.alert:hover, .button.alert:hover {
     border-color: #e82f10;
     color: #e82f10; }
+  button.success:active, button.success:focus, .button.success:active, .button.success:focus {
+    color: transparent; }
   button.success:hover, .button.success:hover {
     border-color: #3c9b5f;
     color: #3c9b5f; }

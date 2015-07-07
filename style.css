@@ -2594,6 +2594,9 @@ a.color-invert {
   a.color-invert:hover {
     color: #62a639; }
 
+.row, #site-footer .footer-menu .nav-menu {
+  overflow-x: hidden; }
+
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }

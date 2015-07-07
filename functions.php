@@ -195,6 +195,21 @@ add_action( 'widgets_init', function () {
 } );
 
 /**
+ * Adds a favicon.
+ *
+ * @since 0.1.0
+ */
+add_action( 'wp_head', function () {
+
+	if ( ! file_exists( get_stylesheet_directory() . '/assets/images/favicon.ico' ) ) {
+		return;
+	}
+	?>
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() . '/assets/images/favicon.ico'; ?>" />
+<?php
+});
+
+/**
  * Loads a partial.
  *
  * @since 0.1.0

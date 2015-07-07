@@ -3162,6 +3162,8 @@ throughout this theme's SASS files.
   line-height: 1.7em !important;
   margin-left: 0.1em;
   margin-right: 0.1em; }
+  [class*="social-icon-"]:hover, [class*="social-icon-"]:active, [class*="social-icon-"]:focus {
+    color: #fff; }
   [class*="social-icon-"][class*="small"] {
     font-size: 0.8em; }
   [class*="social-icon-"][class*="medium"] {
@@ -3170,10 +3172,16 @@ throughout this theme's SASS files.
     font-size: 2em; }
   [class*="social-icon-"][class*="facebook"] {
     background: #3B579D; }
+    [class*="social-icon-"][class*="facebook"]:hover {
+      background: #344d8a; }
   [class*="social-icon-"][class*="linkedin"] {
     background: #0077B5; }
+    [class*="social-icon-"][class*="linkedin"]:hover {
+      background: #00669c; }
   [class*="social-icon-"][class*="youtube"] {
     background: #DD2C28; }
+    [class*="social-icon-"][class*="youtube"]:hover {
+      background: #cb2420; }
 
 /*
 Searchform.

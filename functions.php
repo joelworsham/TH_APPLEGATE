@@ -53,7 +53,7 @@ $applegate_image_sizes = array(
  *
  * @since 0.1.0
  */
-add_action( 'after_setup_theme', function() {
+add_action( 'after_setup_theme', function () {
 
 	// Image sizes
 	if ( ! empty( $applegate_image_sizes ) ) {
@@ -69,8 +69,8 @@ add_action( 'after_setup_theme', function() {
 	require_once __DIR__ . '/includes/theme-support.php';
 
 	// Allow shortcodes in text widget
-	add_filter('widget_text', 'do_shortcode');
-});
+	add_filter( 'widget_text', 'do_shortcode' );
+} );
 
 /**
  * Adds support for custom image sizes.
@@ -86,8 +86,8 @@ function _meesdist_add_image_sizes( $sizes ) {
 	global $applegate_image_sizes;
 
 	$new_sizes = array();
- 	foreach ( $applegate_image_sizes as $ID => $size ) {
-	    $new_sizes[ $ID ] = $size['title'];
+	foreach ( $applegate_image_sizes as $ID => $size ) {
+		$new_sizes[ $ID ] = $size['title'];
 	}
 
 	return array_merge( $sizes, $new_sizes );
@@ -174,24 +174,40 @@ add_action( 'widgets_init', function () {
 
 	// Page
 	register_sidebar( array(
-		'name' => 'Page',
-		'id' => 'page',
-		'description' => 'Displays on all pages.',
+		'name'         => 'Page',
+		'id'           => 'page',
+		'description'  => 'Displays on all pages.',
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	));
+		'after_title'  => '</h3>',
+	) );
 
 	// Header Bible Verse
 	register_sidebar( array(
-		'name' => 'Header Bible Verse',
-		'id' => 'header-bible-verse',
-		'description' => 'Displays in the header.',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'name'          => 'Header Bible Verse',
+		'id'            => 'header-bible-verse',
+		'description'   => 'Displays in the header.',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 		'before_widget' => '',
-		'after_widget' => '',
-	));
+		'after_widget'  => '',
+	) );
 } );
+
+/**
+ * Loads a partial.
+ *
+ * @since 0.1.0
+ *
+ * @param array|string $template The template to load.
+ */
+function applegate_template( $template ) {
+
+	$template = is_array( $template ) ? implode( '/', $template ) : $template;
+
+	if ( file_exists( __DIR__ . "/includes/partials/$template.php" ) ) {
+		include __DIR__ . "/includes/partials/$template.php";
+	}
+}
 
 require_once __DIR__ . '/admin/admin.php';
 require_once __DIR__ . '/includes/theme-functions.php';

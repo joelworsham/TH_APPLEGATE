@@ -15,9 +15,7 @@ get_header();
 ?>
 
 	<div id="error-404" class="page-content row">
-
 		<div class="columns small-12">
-
 			<div class="page-copy">
 				Sorry, but there doesn't seem to be anything here!
 
@@ -29,11 +27,9 @@ get_header();
 				));
 				?>
 
-				If you're still lost, you can always contact us at <?php echo _applegate_sc_email(); ?> or <?php echo _applegate_sc_phone(); ?>.
+				If you're still lost, you can always contact us at <?php echo applegate_sc_email(); ?> or <?php echo applegate_sc_phone(); ?>.
 			</div>
-
 		</div>
-
 	</div>
 
 <?php

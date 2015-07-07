@@ -60,16 +60,6 @@ $buckets = get_buckets();
 
 	</section>
 
-	<section id="home-cta">
-		<div class="row">
-			<div class="columns small-12">
-				<a href="#" class="button fill large expand">
-					Applegate Insulation Cellulose and Cotton Product Catalog
-				</a>
-			</div>
-		</div>
-	</section>
-
 	<section id="home-products">
 		<div class="row">
 			<div class="columns small-12 medium-6">

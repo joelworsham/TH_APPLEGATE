@@ -2882,7 +2882,8 @@ throughout this theme's SASS files.
           padding: 0; } }
       #site-footer .primary-nav .menu > .menu-item {
         position: relative;
-        float: left; }
+        float: left;
+        text-align: center; }
         @media only screen and (max-width: 40em) {
           #site-footer .primary-nav .menu > .menu-item {
             float: none;

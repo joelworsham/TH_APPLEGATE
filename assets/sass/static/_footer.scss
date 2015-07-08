@@ -37,6 +37,7 @@ The static site footer.
       > .menu-item {
         position: relative;
         float: left;
+        text-align: center;
 
         @media #{$small-only} {
           float: none;

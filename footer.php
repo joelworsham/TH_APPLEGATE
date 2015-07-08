@@ -19,10 +19,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<nav class="primary-nav">
 		<div class="row">
 			<?php
+			require_once __DIR__ . '/includes/class-applegate-walker-primarynav.php';
+
+			$menu = get_menu_by_location( 'primary' );
+			$items = wp_get_nav_menu_items( $menu->name );
+			foreach ( $items as $i => $item ) {
+				if ( $item->menu_item_parent != '0' ) {
+					unset( $items[ $i ] );
+				}
+			}
+
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'container'      => false,
 				'depth' => 2,
+				'walker' => new Applegate_Walker_PrimaryNav( count( $items ) ),
 			) );
 			?>
 		</div>

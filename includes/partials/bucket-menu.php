@@ -11,6 +11,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
 
+function applegate_bucket_menu_loop( $items ) {
+
+	static $depth;
+	$depth         = $depth ? $depth : 0;
+	$current_depth = $depth;
+
+	echo $depth > 0 ? '<ul class="sub-menu">' : '';
+
+	foreach ( $items as $item ) :
+		?>
+		<li class="menu-item">
+			<a href="<?php echo get_permalink( $item['post']->ID ); ?>">
+				<?php echo $item['post']->post_title; ?>
+			</a>
+
+			<?php
+			if ( isset( $item['children'] ) ) {
+				$depth ++;
+				applegate_bucket_menu_loop( $item['children'] );
+			}
+			?>
+		</li>
+		<?php
+	endforeach;
+
+	echo $depth > 0 ? '</ul>' : '';
+
+	$depth = $current_depth;
+}
+
 if ( ( $template = applegate_get_current_template() ) && strpos( $template, 'bucket-' ) !== false ): ?>
 	<?php
 	$bucket_parent_ID = get_the_ID();
@@ -37,25 +67,13 @@ if ( ( $template = applegate_get_current_template() ) && strpos( $template, 'buc
 	<nav class="bucket-menu">
 		<div class="row collapse">
 			<div class="small-12 columns">
-				<?php
-				if ( $children = get_children( array(
-					'post_parent' => $bucket_parent_ID,
-					'post_type'   => 'page'
-				) )
-				) {
-					?>
+				<?php if ( $children = get_descendants( $bucket_parent_ID, 'page' ) ) : ?>
+
 					<ul class="menu">
-						<?php foreach ( $children as $post ) : ?>
-							<li class="menu-item">
-								<a href="<?php echo get_permalink( $post ); ?>">
-									<?php echo $post->post_title; ?>
-								</a>
-							</li>
-						<?php endforeach; ?>
+						<?php applegate_bucket_menu_loop( $children ); ?>
 					</ul>
-				<?php
-				}
-				?>
+
+				<?php endif; ?>
 			</div>
 		</div>
 	</nav>

@@ -17,6 +17,7 @@ add_filter( 'body_class', '_applegate_body_class' );
 function _applegate_save_current_template( $t ) {
 
 	$GLOBALS['current_theme_template'] = str_replace( '.php', '', basename( $t ) );
+
 	return $t;
 }
 
@@ -43,21 +44,21 @@ function get_buckets() {
 			'link'    => '/contractors-professionals/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'architects' => array(
+		'architects'  => array(
 			'title'   => 'Architects & Specifiers',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'bar-chart',
 			'link'    => '#',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'building' => array(
+		'building'    => array(
 			'title'   => 'Building Officials',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'building',
 			'link'    => '#',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'home' => array(
+		'home'        => array(
 			'title'   => 'Home Owners',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'home',
@@ -74,7 +75,8 @@ add_filter( 'the_content', 'tgm_io_shortcode_empty_paragraph_fix' );
  *
  * @since 1.0.0
  *
- * @param string $content  String of HTML content.
+ * @param string $content String of HTML content.
+ *
  * @return string $content Amended string of HTML content.
  */
 function tgm_io_shortcode_empty_paragraph_fix( $content ) {
@@ -84,6 +86,32 @@ function tgm_io_shortcode_empty_paragraph_fix( $content ) {
 		']</p>'   => ']',
 		']<br />' => ']'
 	);
+
 	return strtr( $content, $array );
 
+}
+
+function get_descendants( $parent_id, $post_type = 'post' ) {
+
+	$descendants = array();
+
+	$children = get_posts( array(
+		'numberposts' => - 1,
+		'post_status' => 'publish',
+		'post_type'   => $post_type,
+		'post_parent' => $parent_id,
+	) );
+
+	foreach ( $children as $child ) {
+
+		$descendants[ $child->ID ]['post'] = $child;
+
+		$grandchildren = get_descendants( $child->ID, $post_type );
+
+		if ( ! empty( $grandchildren ) ) {
+			$descendants[ $child->ID ]['children'] = $grandchildren;
+		}
+	}
+
+	return $descendants;
 }

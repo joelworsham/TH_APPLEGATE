@@ -3002,23 +3002,23 @@ throughout this theme's SASS files.
   .bucket-gutter.bucket-contractors {
     background: #B80611; }
 
-.bucket-menu {
+#bucket-menu {
   margin-top: 10px; }
-  .bucket-menu .menu {
+  #bucket-menu .menu {
     font-size: 0.8em;
     color: #999;
     font-weight: bold; }
-    .bucket-menu .menu > .menu-item {
+    #bucket-menu .menu > .menu-item {
       position: relative;
       display: inline-block; }
-      .bucket-menu .menu > .menu-item:not(:first-of-type):before {
+      #bucket-menu .menu > .menu-item:not(:first-of-type):before {
         content: '|';
         margin: 0 0.5em; }
-      .bucket-menu .menu > .menu-item:hover .sub-menu {
+      #bucket-menu .menu > .menu-item:hover .sub-menu {
         display: block; }
-      .bucket-menu .menu > .menu-item a {
+      #bucket-menu .menu > .menu-item a {
         color: inherit; }
-  .bucket-menu .sub-menu {
+  #bucket-menu .sub-menu {
     position: absolute;
     display: none;
     top: 100%;
@@ -3030,7 +3030,7 @@ throughout this theme's SASS files.
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     padding: 0.5em;
     z-index: 100; }
-    .bucket-menu .sub-menu .menu-item a {
+    #bucket-menu .sub-menu .menu-item a {
       display: block;
       padding: 0.25em 0.5em; }
 

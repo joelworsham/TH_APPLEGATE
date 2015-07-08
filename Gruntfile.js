@@ -79,6 +79,7 @@ module.exports = function (grunt) {
                         'assets/vendor/js/jquery.cookie.js',
                         'assets/vendor/js/foundation/foundation.js',
                         'assets/vendor/js/foundation/foundation.accordion.js',
+                        'assets/vendor/js/foundation/foundation.equalizer.js',
 
                         // Included dynamically in header.php
                         '!assets/vendor/js/html5.js',

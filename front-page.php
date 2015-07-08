@@ -36,14 +36,14 @@ $buckets = get_buckets();
 
 	<section id="home-buckets">
 
-		<div class="row">
+		<div class="row" data-equalizer>
 			<?php foreach ( $buckets as $bucket ) : ?>
 				<div class="bucket columns small-12 medium-3" data-link="<?php echo $bucket['link']; ?>">
 					<div class="bucket-icon">
 						<div class="fa fa-<?php echo $bucket['icon']; ?>"></div>
 					</div>
 
-					<h4 class="bucket-title">
+					<h4 class="bucket-title" data-equalizer-watch>
 						<a href="<?php echo $bucket['link']; ?>">
 							<?php echo $bucket['title']; ?>
 						</a>

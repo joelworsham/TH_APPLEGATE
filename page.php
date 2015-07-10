@@ -27,6 +27,8 @@ the_post();
 			<div class="page-copy">
 				<?php the_content(); ?>
 			</div>
+
+			<?php applegate_template( 'technical-documents' ); ?>
 		</div>
 	</div>
 </section>

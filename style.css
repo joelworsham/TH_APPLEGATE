@@ -2888,6 +2888,7 @@ throughout this theme's SASS files.
           #site-footer .primary-nav .menu > .menu-item {
             float: none;
             text-align: center;
+            width: 100% !important;
             border-top: 3px solid #fff; } }
         @media only screen and (min-width:40.063em) {
           #site-footer .primary-nav .menu > .menu-item:hover .sub-menu {

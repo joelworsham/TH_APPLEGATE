@@ -42,6 +42,7 @@ The static site footer.
         @media #{$small-only} {
           float: none;
           text-align: center;
+          width: 100% !important;
           border-top: 3px solid #fff;
         }
 

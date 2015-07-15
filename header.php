@@ -10,6 +10,11 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
+
+// Start a session to preserve bucket data
+if ( ! isset( $_SESSION ) ) {
+	session_start();
+}
 ?>
 
 <!DOCTYPE html>

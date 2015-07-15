@@ -48,21 +48,21 @@ function get_buckets() {
 			'title'   => 'Architects & Specifiers',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'bar-chart',
-			'link'    => '#',
+			'link'    => '/architects-specifiers/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'building'    => array(
+		'buildingofficials'    => array(
 			'title'   => 'Building Officials',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'building',
-			'link'    => '#',
+			'link'    => '/building-officials/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'home'        => array(
+		'homeowners'        => array(
 			'title'   => 'Home Owners',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'home',
-			'link'    => '#',
+			'link'    => '/home-owners/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
 	);

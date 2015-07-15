@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Bucket - Contractors & Professionals
+ * Template Name: Bucket - Home Owners
  *
- * Bucket template for contractors.
+ * Bucket template for home owners.
  *
  * @since 0.1.0
  * @package Applegate
@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Define current bucket session
-$_SESSION['applegate-bucket'] = 'Contractors';
+$_SESSION['applegate-bucket'] = 'Home Owners';
 
 the_post();
 ?>

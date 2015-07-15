@@ -33,6 +33,18 @@ Styles page.php.
   &.bucket-contractors {
     background: $bucket-contractors;
   }
+
+  &.bucket-architects {
+    background: $bucket-architects;
+  }
+
+  &.bucket-homeowners {
+    background: $bucket-homeowners;
+  }
+
+  &.bucket-buildingofficials {
+    background: $bucket-buildingofficials;
+  }
 }
 
 #bucket-menu {

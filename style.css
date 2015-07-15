@@ -2710,6 +2710,10 @@ a.color-invert {
   a.color-invert:hover {
     color: #62a639; }
 
+ul {
+  margin: 0;
+  list-style: none; }
+
 button, .button {
   -webkit-transition: border 300ms, color 300ms, background-color 300ms;
           transition: border 300ms, color 300ms, background-color 300ms; }
@@ -3007,6 +3011,12 @@ throughout this theme's SASS files.
     border: 2px solid #fff; }
   .bucket-gutter.bucket-contractors {
     background: #B80611; }
+  .bucket-gutter.bucket-architects {
+    background: #094E96; }
+  .bucket-gutter.bucket-homeowners {
+    background: #4A3750; }
+  .bucket-gutter.bucket-buildingofficials {
+    background: #B9771B; }
 
 #bucket-menu {
   margin-top: 10px; }

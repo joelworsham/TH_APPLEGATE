@@ -42,17 +42,17 @@ body.home {
           }
         }
         &:nth-child(3) {
-          color: $bucket-building;
+          color: $bucket-buildingofficials;
 
           .button {
-            background: $bucket-building;
+            background: $bucket-buildingofficials;
           }
         }
         &:nth-child(4) {
-          color: $bucket-home;
+          color: $bucket-homeowners;
 
           .button {
-            background: $bucket-home;
+            background: $bucket-homeowners;
           }
         }
       }

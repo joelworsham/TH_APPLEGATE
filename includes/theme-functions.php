@@ -130,3 +130,29 @@ function get_menu_by_location( $location ) {
 
 	return $menu_obj;
 }
+
+function applegate_save_bucket( $bucket ) {
+
+	if ( is_user_logged_in() ) {
+
+		update_user_meta( get_current_user_id(), 'applegate_current_bucket', $bucket );
+		return true;
+	} elseif ( isset( $_SESSION ) ) {
+
+		$_SESSION['applegate-bucket'] = $bucket;
+		return true;
+	}
+
+	return false;
+}
+
+function applegate_get_bucket() {
+
+	if ( is_user_logged_in() ) {
+		return get_user_meta( get_current_user_id(), 'applegate_current_bucket', true );
+	} elseif ( isset( $_SESSION['applegate-bucket'] ) ) {
+		return $_SESSION['applegate-bucket'];
+	}
+
+	return false;
+}

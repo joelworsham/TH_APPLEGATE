@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Define current bucket session
-$_SESSION['applegate-bucket'] = 'Building Officials';
+applegate_save_bucket( 'building-officials' );
 
 the_post();
 ?>

@@ -32,6 +32,21 @@ get_header();
 						<?php
 						while ( have_posts() ) :
 							the_post();
+
+							// Only show if in current bucket (or if no bucket is set, show all)
+							if ( $bucket = applegate_get_bucket() ) {
+
+								if ( $category = wp_get_post_terms( get_the_ID(), 'faq-bucket' ) ) {
+
+									// Only take first (should only be one set)
+									$category = $category[0];
+									$category = $category->slug;
+
+									if ( $category !== $bucket ) {
+										continue;
+									}
+								}
+							}
 							?>
 							<li <?php post_class( array( 'accordion-navigation' ) ); ?>>
 

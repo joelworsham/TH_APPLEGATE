@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Define current bucket session
-$_SESSION['applegate-bucket'] = 'Architects';
+applegate_save_bucket( 'architects-specifiers' );
 
 the_post();
 ?>

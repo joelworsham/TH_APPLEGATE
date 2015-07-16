@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Contact
- *
- * Page template for the contact us page.
+ * The theme's page file use for displaying pages.
  *
  * @since 0.1.0
  * @package Applegate
@@ -18,22 +16,21 @@ get_header();
 the_post();
 ?>
 
-	<section id="page-<?php the_ID(); ?>">
+	<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="row">
 			<div class="page-content small-12 medium-8 columns">
 
-				<h1 class="page-title">
+				<h1 class="post-title">
 					<?php the_title(); ?>
 				</h1>
 
-				<div class="page-copy">
+				<div class="post-copy">
 					<?php the_content(); ?>
 				</div>
 
-				<?php applegate_template( 'technical-documents' ); ?>
 			</div>
 
-			<?php get_sidebar( 'contact' ); ?>
+			<?php get_sidebar( 'event' ); ?>
 		</div>
 	</section>
 

@@ -13,6 +13,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'template_include', '_applegate_save_current_template', 1000 );
 add_filter( 'body_class', '_applegate_body_class' );
+add_action( 'admin_menu', '_applegate_change_post_label' );
+add_action( 'init', '_applegate_change_post_object' );
+
+function _applegate_change_post_label() {
+
+	global $menu, $submenu;
+
+	$menu[5][0]                 = 'News';
+	$menu[5][6]                 = 'dashicons-megaphone';
+	$submenu['edit.php'][5][0]  = 'News';
+	$submenu['edit.php'][10][0] = 'Add News';
+	$submenu['edit.php'][16][0] = 'News Tags';
+}
+
+function _applegate_change_post_object() {
+
+	global $wp_post_types;
+
+	$labels                     = &$wp_post_types['post']->labels;
+	$labels->name               = 'News';
+	$labels->singular_name      = 'News';
+	$labels->add_new            = 'Add News';
+	$labels->add_new_item       = 'Add News';
+	$labels->edit_item          = 'Edit News';
+	$labels->new_item           = 'News';
+	$labels->view_item          = 'View News';
+	$labels->search_items       = 'Search News';
+	$labels->not_found          = 'No News found';
+	$labels->not_found_in_trash = 'No News found in Trash';
+	$labels->all_items          = 'All News';
+	$labels->menu_name          = 'News';
+	$labels->name_admin_bar     = 'News';
+}
+
+add_action( 'admin_menu', 'revcon_change_post_label' );
+add_action( 'init', 'revcon_change_post_object' );
 
 function _applegate_save_current_template( $t ) {
 
@@ -37,21 +73,21 @@ function applegate_get_current_template() {
 function get_buckets() {
 
 	return $buckets = array(
-		'contractors' => array(
+		'contractors'       => array(
 			'title'   => 'Contractors & Professionals',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'wrench',
 			'link'    => '/contractors-professionals/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'architects'  => array(
+		'architects'        => array(
 			'title'   => 'Architects & Specifiers',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'bar-chart',
 			'link'    => '/architects-specifiers/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'buildingofficials'    => array(
+		'buildingofficials' => array(
 			'title'   => 'Building Officials',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'building',
@@ -115,6 +151,7 @@ function get_descendants( $parent_id, $post_type = 'post' ) {
 
 	return $descendants;
 }
+
 function get_menu_by_location( $location ) {
 
 	if ( empty( $location ) ) {
@@ -136,10 +173,12 @@ function applegate_save_bucket( $bucket ) {
 	if ( is_user_logged_in() ) {
 
 		update_user_meta( get_current_user_id(), 'applegate_current_bucket', $bucket );
+
 		return true;
 	} elseif ( isset( $_SESSION ) ) {
 
 		$_SESSION['applegate-bucket'] = $bucket;
+
 		return true;
 	}
 
@@ -155,4 +194,16 @@ function applegate_get_bucket() {
 	}
 
 	return false;
+}
+
+function applegate_post_meta() {
+
+	if ( $categories = get_the_Category_list( ', ' ) ) {
+		$categories = 'in ' . $categories;
+	}
+	?>
+	<p class="post-meta">
+		<span class="fa fa-pencil"></span> Posted on <?php the_date(); ?> by <?php the_author(); ?> <?php echo $categories; ?>
+	</p>
+<?php
 }

@@ -2980,6 +2980,10 @@ throughout this theme's SASS files.
   list-style: none;
   margin: 0; }
 
+.post-meta {
+  font-style: italic;
+  color: #888888; }
+
 /*
 Styles page.php.
 

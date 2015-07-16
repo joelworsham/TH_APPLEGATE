@@ -16,7 +16,7 @@ get_header();
 the_post();
 ?>
 
-<section id="page-<?php the_ID(); ?>" <?php body_class( array( 'page-content' ) ); ?>>
+<section id="page-<?php the_ID(); ?>" class="page-content">
 	<div class="row">
 		<div class="small-12 columns">
 

@@ -21,3 +21,8 @@ Styles shared among all templates.
     @extend .large-4;
   }
 }
+
+.post-meta {
+  font-style: italic;
+  color: lighten($body-font-color, 40%);
+}

@@ -2963,6 +2963,20 @@ throughout this theme's SASS files.
       background: transparent; }
 
 /*
+Styles page.php.
+
+@since 0.1.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 0.1.0
+*/
+#site-sidebar {
+  margin: 30px 0; }
+
+/*
 Styles shared among all templates.
 
 @since 0.1.0

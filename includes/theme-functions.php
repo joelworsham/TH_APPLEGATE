@@ -47,9 +47,6 @@ function _applegate_change_post_object() {
 	$labels->name_admin_bar     = 'News';
 }
 
-add_action( 'admin_menu', 'revcon_change_post_label' );
-add_action( 'init', 'revcon_change_post_object' );
-
 function _applegate_save_current_template( $t ) {
 
 	$GLOBALS['current_theme_template'] = str_replace( '.php', '', basename( $t ) );

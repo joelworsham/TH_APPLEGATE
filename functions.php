@@ -182,6 +182,15 @@ add_action( 'widgets_init', function () {
 		'after_title'  => '</h3>',
 	) );
 
+	// Contact
+	register_sidebar( array(
+		'name'         => 'Contact',
+		'id'           => 'contact',
+		'description'  => 'Displays on the contact template.',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title'  => '</h3>',
+	) );
+
 	// Header Bible Verse
 	register_sidebar( array(
 		'name'          => 'Header Bible Verse',

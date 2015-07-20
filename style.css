@@ -3114,6 +3114,12 @@ body.home #home-buckets {
             transition: color 300ms;
     cursor: pointer;
     z-index: 1; }
+    @media only screen and (min-width:40.063em) {
+      body.home #home-buckets .bucket {
+        width: 50%; } }
+    @media only screen and (min-width:64.063em) {
+      body.home #home-buckets .bucket {
+        width: 20%; } }
     body.home #home-buckets .bucket:hover {
       color: #72BF44; }
       @media only screen and (min-width:40.063em) {

@@ -2925,13 +2925,14 @@ throughout this theme's SASS files.
       white-space: nowrap;
       list-style: none;
       margin: 0;
-      background: #72BF44;
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-      display: none; }
+      display: none;
+      width: 100%;
+      padding-right: 3px; }
       #site-footer .primary-nav .sub-menu a {
         display: block;
         color: inherit;
-        padding: 0.5em; }
+        padding: 0.5em;
+        background: #72BF44; }
         #site-footer .primary-nav .sub-menu a:hover {
           background: #66ae3c; }
   #site-footer .footer-menu {

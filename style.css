@@ -3,7 +3,7 @@ Theme Name: Applegate
 Description: A kick-butt theme for Applegate.
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com
-Version: 1.2.1
+Version: 1.2.2
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -2928,11 +2928,14 @@ throughout this theme's SASS files.
       display: none;
       width: 100%;
       padding-right: 3px; }
+      #site-footer .primary-nav .sub-menu .menu-item:last-of-type a {
+        border-bottom: none; }
       #site-footer .primary-nav .sub-menu a {
         display: block;
         color: inherit;
         padding: 0.5em;
-        background: #72BF44; }
+        background: #72BF44;
+        border-bottom: 1px solid #66ae3c; }
         #site-footer .primary-nav .sub-menu a:hover {
           background: #66ae3c; }
   #site-footer .footer-menu {

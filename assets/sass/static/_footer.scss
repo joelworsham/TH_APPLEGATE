@@ -105,11 +105,20 @@ The static site footer.
       width: 100%;
       padding-right: 3px;
 
+      .menu-item {
+        &:last-of-type {
+          a {
+            border-bottom: none;
+          }
+        }
+      }
+
       a {
         display: block;
         color: inherit;
         padding: 0.5em;
         background: $primary-color;
+        border-bottom: 1px solid darken($primary-color, 5%);
 
         &:hover {
           background: darken($primary-color, 5%);

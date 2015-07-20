@@ -37,8 +37,27 @@ $buckets = get_buckets();
 	<section id="home-buckets">
 
 		<div class="row" data-equalizer>
+
+			<div class="bucket columns small-12" style="width: 20%;" data-link="/products/">
+				<div class="bucket-icon">
+					<div class="fa fa-shopping-cart"></div>
+				</div>
+
+				<h4 class="bucket-title" data-equalizer-watch>
+					<a href="/products/">
+						Products
+					</a>
+				</h4>
+
+				<div class="bucket-image">
+					<a href="/products/">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mystery-man.jpg" />
+					</a>
+				</div>
+			</div>
+
 			<?php foreach ( $buckets as $bucket ) : ?>
-				<div class="bucket columns small-12 medium-3" data-link="<?php echo $bucket['link']; ?>">
+				<div class="bucket columns small-12" style="width: 20%;" data-link="<?php echo $bucket['link']; ?>">
 					<div class="bucket-icon">
 						<div class="fa fa-<?php echo $bucket['icon']; ?>"></div>
 					</div>
@@ -60,23 +79,24 @@ $buckets = get_buckets();
 
 	</section>
 
-	<section id="home-products">
-		<div class="row">
-			<div class="columns small-12 medium-6">
-				<img src="" />
-			</div>
-
-			<div class="columns small-12 medium-6 medium-text-right">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/products.png" />
-			</div>
-
-			<div class="vertical-center columns small-12 medium-6">
-				<a href="#" class="button secondary large small-only-expand">
-					View Our Products
-				</a>
-			</div>
-		</div>
-	</section>
+	<!-- This looked so much better :'( -->
+<!--	<section id="home-products">-->
+<!--		<div class="row">-->
+<!--			<div class="columns small-12 medium-6">-->
+<!--				<img src="" />-->
+<!--			</div>-->
+<!---->
+<!--			<div class="columns small-12 medium-6 medium-text-right">-->
+<!--				<img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/products.png" />-->
+<!--			</div>-->
+<!---->
+<!--			<div class="vertical-center columns small-12 medium-6">-->
+<!--				<a href="#" class="button secondary large small-only-expand">-->
+<!--					View Our Products-->
+<!--				</a>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--	</section>-->
 
 <?php endif; ?>
 

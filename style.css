@@ -3114,25 +3114,29 @@ body.home #home-buckets {
             transition: color 300ms;
     cursor: pointer;
     z-index: 1; }
-    @media only screen and (min-width:40.063em) {
-      body.home #home-buckets .bucket:hover {
-        z-index: 2; } }
-    body.home #home-buckets .bucket:hover:nth-child(1) {
-      color: #B80611; }
-      body.home #home-buckets .bucket:hover:nth-child(1) .button {
-        background: #B80611; }
-    body.home #home-buckets .bucket:hover:nth-child(2) {
-      color: #094E96; }
-      body.home #home-buckets .bucket:hover:nth-child(2) .button {
-        background: #094E96; }
-    body.home #home-buckets .bucket:hover:nth-child(3) {
-      color: #B9771B; }
-      body.home #home-buckets .bucket:hover:nth-child(3) .button {
-        background: #B9771B; }
-    body.home #home-buckets .bucket:hover:nth-child(4) {
-      color: #4A3750; }
-      body.home #home-buckets .bucket:hover:nth-child(4) .button {
-        background: #4A3750; }
+    body.home #home-buckets .bucket:hover {
+      color: #72BF44; }
+      @media only screen and (min-width:40.063em) {
+        body.home #home-buckets .bucket:hover {
+          z-index: 2; } }
+      body.home #home-buckets .bucket:hover .button {
+        background: #72BF44; }
+      body.home #home-buckets .bucket:hover:nth-child(2) {
+        color: #B80611; }
+        body.home #home-buckets .bucket:hover:nth-child(2) .button {
+          background: #B80611; }
+      body.home #home-buckets .bucket:hover:nth-child(3) {
+        color: #094E96; }
+        body.home #home-buckets .bucket:hover:nth-child(3) .button {
+          background: #094E96; }
+      body.home #home-buckets .bucket:hover:nth-child(4) {
+        color: #B9771B; }
+        body.home #home-buckets .bucket:hover:nth-child(4) .button {
+          background: #B9771B; }
+      body.home #home-buckets .bucket:hover:nth-child(5) {
+        color: #4A3750; }
+        body.home #home-buckets .bucket:hover:nth-child(5) .button {
+          background: #4A3750; }
     body.home #home-buckets .bucket .bucket-icon {
       position: absolute;
       top: 0;

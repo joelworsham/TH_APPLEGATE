@@ -22,33 +22,47 @@ body.home {
       cursor: pointer;
       z-index: 1;
 
+      @media #{$medium-up} {
+        width: 50%;
+      }
+
+      @media #{$large-up} {
+        width: 20%;
+      }
+
       &:hover {
         @media #{$medium-up} {
           z-index: 2;
         }
 
-        &:nth-child(1) {
+        color: $primary-color;
+
+        .button {
+          background: $primary-color;
+        }
+
+        &:nth-child(2) {
           color: $bucket-contractors;
 
           .button {
             background: $bucket-contractors;
           }
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           color: $bucket-architects;
 
           .button {
             background: $bucket-architects;
           }
         }
-        &:nth-child(3) {
+        &:nth-child(4) {
           color: $bucket-buildingofficials;
 
           .button {
             background: $bucket-buildingofficials;
           }
         }
-        &:nth-child(4) {
+        &:nth-child(5) {
           color: $bucket-homeowners;
 
           .button {

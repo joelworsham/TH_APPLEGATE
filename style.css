@@ -3,7 +3,7 @@ Theme Name: Applegate
 Description: A kick-butt theme for Applegate.
 Author: Joel Worsham
 Author URI: http://realbigmarketing.com
-Version: 1.2.2
+Version: 1.3.0
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -2928,14 +2928,11 @@ throughout this theme's SASS files.
       display: none;
       width: 100%;
       padding-right: 3px; }
-      #site-footer .primary-nav .sub-menu .menu-item:last-of-type a {
-        border-bottom: none; }
       #site-footer .primary-nav .sub-menu a {
         display: block;
         color: inherit;
         padding: 0.5em;
-        background: #72BF44;
-        border-bottom: 1px solid #66ae3c; }
+        background: #72BF44; }
         #site-footer .primary-nav .sub-menu a:hover {
           background: #66ae3c; }
   #site-footer .footer-menu {
@@ -3118,24 +3115,34 @@ body.home #home-buckets {
     cursor: pointer;
     z-index: 1; }
     @media only screen and (min-width:40.063em) {
-      body.home #home-buckets .bucket:hover {
-        z-index: 2; } }
-    body.home #home-buckets .bucket:hover:nth-child(1) {
-      color: #B80611; }
-      body.home #home-buckets .bucket:hover:nth-child(1) .button {
-        background: #B80611; }
-    body.home #home-buckets .bucket:hover:nth-child(2) {
-      color: #094E96; }
-      body.home #home-buckets .bucket:hover:nth-child(2) .button {
-        background: #094E96; }
-    body.home #home-buckets .bucket:hover:nth-child(3) {
-      color: #B9771B; }
-      body.home #home-buckets .bucket:hover:nth-child(3) .button {
-        background: #B9771B; }
-    body.home #home-buckets .bucket:hover:nth-child(4) {
-      color: #4A3750; }
-      body.home #home-buckets .bucket:hover:nth-child(4) .button {
-        background: #4A3750; }
+      body.home #home-buckets .bucket {
+        width: 50%; } }
+    @media only screen and (min-width:64.063em) {
+      body.home #home-buckets .bucket {
+        width: 20%; } }
+    body.home #home-buckets .bucket:hover {
+      color: #72BF44; }
+      @media only screen and (min-width:40.063em) {
+        body.home #home-buckets .bucket:hover {
+          z-index: 2; } }
+      body.home #home-buckets .bucket:hover .button {
+        background: #72BF44; }
+      body.home #home-buckets .bucket:hover:nth-child(2) {
+        color: #B80611; }
+        body.home #home-buckets .bucket:hover:nth-child(2) .button {
+          background: #B80611; }
+      body.home #home-buckets .bucket:hover:nth-child(3) {
+        color: #094E96; }
+        body.home #home-buckets .bucket:hover:nth-child(3) .button {
+          background: #094E96; }
+      body.home #home-buckets .bucket:hover:nth-child(4) {
+        color: #B9771B; }
+        body.home #home-buckets .bucket:hover:nth-child(4) .button {
+          background: #B9771B; }
+      body.home #home-buckets .bucket:hover:nth-child(5) {
+        color: #4A3750; }
+        body.home #home-buckets .bucket:hover:nth-child(5) .button {
+          background: #4A3750; }
     body.home #home-buckets .bucket .bucket-icon {
       position: absolute;
       top: 0;

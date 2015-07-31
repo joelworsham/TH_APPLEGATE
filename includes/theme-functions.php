@@ -13,6 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'template_include', '_applegate_save_current_template', 1000 );
 add_filter( 'body_class', '_applegate_body_class' );
+add_filter( 'embed_oembed_html', '_applegate_youtube_embed_related_videos', 10, 4 );
 add_action( 'admin_menu', '_applegate_change_post_label' );
 add_action( 'init', '_applegate_change_post_object' );
 
@@ -203,4 +204,15 @@ function applegate_post_meta() {
 		<span class="fa fa-pencil"></span> Posted on <?php the_date(); ?> by <?php the_author(); ?> <?php echo $categories; ?>
 	</p>
 <?php
+}
+
+function _applegate_youtube_embed_related_videos( $cache ) {
+
+	$search_regex = '/feature=oembed/';
+	if (preg_match($search_regex, $cache ) ) {
+
+		$cache = preg_replace( $search_regex, 'feature=oembed&rel=0', $cache );
+	}
+
+	return $cache;
 }

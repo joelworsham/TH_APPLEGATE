@@ -1,0 +1,11 @@
+/*
+Modifies youtube embeds.
+
+@since 0.1.0
+*/
+@import "../settings";
+
+iframe[src*="youtube.com"] {
+  width: 100%;
+  max-width: ($row-width / 2) - $column-gutter;
+}

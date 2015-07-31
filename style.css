@@ -2928,11 +2928,14 @@ throughout this theme's SASS files.
       display: none;
       width: 100%;
       padding-right: 3px; }
+      #site-footer .primary-nav .sub-menu .menu-item:last-of-type a {
+        border-bottom: none; }
       #site-footer .primary-nav .sub-menu a {
         display: block;
         color: inherit;
         padding: 0.5em;
-        background: #72BF44; }
+        background: #72BF44;
+        border-bottom: 1px solid #66ae3c; }
         #site-footer .primary-nav .sub-menu a:hover {
           background: #66ae3c; }
   #site-footer .footer-menu {
@@ -3266,6 +3269,21 @@ throughout this theme's SASS files.
 .search-form button {
   background: #e6e6e6;
   height: 2.3125rem; }
+
+/*
+Modifies youtube embeds.
+
+@since 0.1.0
+*/
+/*
+Sets up the theme's styling properties and makes some variables already set in Foundation available for easy use
+throughout this theme's SASS files.
+
+@since 0.1.0
+*/
+iframe[src*="youtube.com"] {
+  width: 100%;
+  max-width: 29.375rem; }
 
 /*
 This provides overrides for some WP stuff (not much at all).

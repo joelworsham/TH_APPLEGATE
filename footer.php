@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php
 			require_once __DIR__ . '/includes/class-applegate-walker-primarynav.php';
 
-			$menu = get_menu_by_location( 'primary' );
+			$menu  = get_menu_by_location( 'primary' );
 			$items = wp_get_nav_menu_items( $menu->name );
 			foreach ( $items as $i => $item ) {
 				if ( $item->menu_item_parent != '0' ) {
@@ -32,8 +32,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'container'      => false,
-				'depth' => 2,
-				'walker' => new Applegate_Walker_PrimaryNav( count( $items ) ),
+				'depth'          => 2,
+				'walker'         => new Applegate_Walker_PrimaryNav( count( $items ) ),
 			) );
 			?>
 		</div>
@@ -41,16 +41,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="footer-menu show-for-medium-up">
 		<div class="row">
-			<div class="small-12 columns">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'footer',
-					'container'      => false,
-					'menu_class' => 'nav-menu',
-					'depth' => 3,
-				) );
-				?>
-			</div>
+			<?php
+			$footer_menu_pages = array();
+			for ( $i = 1; $i <= 5; $i ++ ) {
+				$footer_menu_pages[] = get_option( "applegate_footer_menu_$i" );
+			}
+			$footer_menu_pages = array_filter( $footer_menu_pages );
+
+			$columns = count( $footer_menu_pages );
+
+			if ( ! empty( $footer_menu_pages ) ) {
+				foreach ( $footer_menu_pages as $page_ID ) {
+
+					echo '<ul class="footer-menu-column columns medium-' . ( 12 / $columns ) . '">';
+
+					wp_list_pages( array(
+						'child_of' => $page_ID,
+						'title_li' => get_the_title( $page_ID ),
+					) );
+
+					echo '</ul>';
+				}
+			}
+			?>
 		</div>
 	</div>
 

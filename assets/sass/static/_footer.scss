@@ -156,19 +156,17 @@ The static site footer.
       }
     }
 
-    .nav-menu {
-      @extend .row;
-      @extend .expand;
+    .footer-menu-column {
 
       // First level
-      > .menu-item {
-        @extend .columns;
-        width: 20%;
+      > .pagenav {
+        font-weight: bold;
+        cursor: default;
+        font-size: 1.2em;
 
-        > a {
-          font-weight: bold;
-          cursor: default;
-          font-size: 1.2em;
+        > ul {
+          font-weight: normal;
+          font-size: 0.8em;
         }
       }
     }

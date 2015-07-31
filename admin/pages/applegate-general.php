@@ -34,4 +34,9 @@ add_action( 'admin_init', function() {
 	register_setting( 'applegate-settings', 'applegate_facebook' );
 	register_setting( 'applegate-settings', 'applegate_linkedin' );
 	register_setting( 'applegate-settings', 'applegate_youtube' );
+	register_setting( 'applegate-settings', 'applegate_footer_menu_1' );
+	register_setting( 'applegate-settings', 'applegate_footer_menu_2' );
+	register_setting( 'applegate-settings', 'applegate_footer_menu_3' );
+	register_setting( 'applegate-settings', 'applegate_footer_menu_4' );
+	register_setting( 'applegate-settings', 'applegate_footer_menu_5' );
 });

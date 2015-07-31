@@ -31,8 +31,7 @@ function applegate_pageapplegate_settings_output() {
 add_action( 'admin_init', function() {
 
 	register_setting( 'applegate-settings', 'applegate_phone' );
-	register_setting( 'applegate-settings', 'applegate_fax' );
-	register_setting( 'applegate-settings', 'applegate_email' );
-	register_setting( 'applegate-settings', 'applegate_hours_office' );
-	register_setting( 'applegate-settings', 'applegate_hours_condensed' );
+	register_setting( 'applegate-settings', 'applegate_facebook' );
+	register_setting( 'applegate-settings', 'applegate_linkedin' );
+	register_setting( 'applegate-settings', 'applegate_youtube' );
 });

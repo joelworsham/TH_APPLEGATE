@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Require files
-//require_once __DIR__ . '/pages/applegate-general.php';
+require_once __DIR__ . '/pages/applegate-general.php';
 //require_once __DIR__ . '/extra-meta/contact.php';
 
 /**

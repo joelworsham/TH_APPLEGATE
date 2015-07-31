@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 add_action( 'init', function () {
 	add_shortcode( 'row', 'applegate_sc_row' );
 	add_shortcode( 'column', 'applegate_sc_column' );
+	add_shortcode( 'hide_for_small', 'applegate_sc_hide_for_small' );
 } );
 
 function applegate_sc_row( $atts = array(), $content = '' ) {
@@ -37,4 +38,8 @@ function applegate_sc_column( $atts = array(), $content = '' ) {
 	}
 
 	return "<div class=\"$class\">" . do_shortcode( $content ) . '</div>';
+}
+
+function applegate_sc_hide_for_small( $atts = array(), $content = '' ) {
+	return '<div class="hide-for-small">' . do_shortcode( $content ) . '</div>';
 }

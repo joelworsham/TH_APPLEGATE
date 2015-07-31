@@ -2839,6 +2839,12 @@ throughout this theme's SASS files.
     #site-header .bible-verse a {
       color: inherit; }
 
+.mobile-search {
+  border-bottom: 3px solid #030303;
+  margin-bottom: 15px; }
+  .mobile-search form, .mobile-search input {
+    margin: 0; }
+
 .mobile-bible-verse {
   color: inherit;
   font-style: italic;
@@ -2859,8 +2865,9 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
-#site-content {
-  min-height: 400px; }
+@media only screen and (min-width:40.063em) {
+  #site-content {
+    min-height: 400px; } }
 
 /*
 The static site footer.
@@ -3042,12 +3049,22 @@ throughout this theme's SASS files.
 .bucket-gutter {
   color: #fff;
   font-weight: bold;
-  font-size: 1.8em; }
+  line-height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  @media only screen and (min-width:40.063em) {
+    .bucket-gutter {
+      padding-top: 0;
+      padding-bottom: 0;
+      line-height: inherit;
+      font-size: 1.8em; } }
   .bucket-gutter a {
     color: inherit; }
   .bucket-gutter .left {
-    margin-right: 0.5em;
-    margin-top: 6px; }
+    margin-right: 0.5em; }
+    @media only screen and (min-width:40.063em) {
+      .bucket-gutter .left {
+        margin-top: 6px; } }
   .bucket-gutter .fa {
     font-size: 0.5em;
     width: 30px;
@@ -3131,6 +3148,11 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
+body.home .page-content {
+  margin: 15px 0; }
+  @media only screen and (min-width:40.063em) {
+    body.home .page-content {
+      margin: 30px 0; } }
 @media only screen and (min-width:40.063em) {
   body.home #home-buckets {
     margin-top: 50px;
@@ -3219,7 +3241,7 @@ body.home #home-buckets .bucket {
     float: right;
     text-align: left;
     width: 75%;
-    font-size: 0.6em; }
+    font-size: 0.8em; }
     @media only screen and (min-width:40.063em) {
       body.home #home-buckets .bucket .bucket-title {
         float: none;

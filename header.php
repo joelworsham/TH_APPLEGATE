@@ -82,6 +82,10 @@ if ( ! isset( $_SESSION ) ) {
 		</div>
 	</header>
 
+	<div class="mobile-search">
+		<?php get_search_form(); ?>
+	</div>
+
 	<div class="mobile-bible-verse text-center hide-for-medium-up">
 		<?php dynamic_sidebar( 'header-bible-verse' ); ?>
 	</div>

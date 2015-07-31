@@ -10,8 +10,16 @@ $section-gutter: 50px;
 $icon-size: 75px;
 
 body.home {
-  #home-buckets {
 
+  .page-content {
+    margin: 15px 0;
+
+    @media #{$medium-up} {
+      margin: 30px 0;
+    }
+  }
+
+  #home-buckets {
 
     @media #{$medium-up} {
       margin-top: 50px;
@@ -130,7 +138,7 @@ body.home {
         float: right;
         text-align: left;
         width: 75%;
-        font-size: 0.6em;
+        font-size: 0.8em;
 
         @media #{$medium-up} {
           float: none;

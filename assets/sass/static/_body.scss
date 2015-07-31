@@ -7,5 +7,7 @@ The static site body.
 @import "../settings";
 
 #site-content {
-  min-height: 400px;
+  @media #{$medium-up} {
+    min-height: 400px;
+  }
 }

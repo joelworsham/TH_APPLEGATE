@@ -8,7 +8,16 @@ Styles page.php.
 .bucket-gutter {
   color: $light-color;
   font-weight: bold;
-  font-size: 1.8em;
+  line-height: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media #{$medium-up} {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: inherit;
+    font-size: 1.8em;
+  }
 
   a {
     color: inherit;
@@ -16,7 +25,10 @@ Styles page.php.
 
   .left {
     margin-right: 0.5em;
-    margin-top: 6px;
+
+    @media #{$medium-up} {
+      margin-top: 6px;
+    }
   }
 
   .fa {

@@ -68,6 +68,15 @@ The static site header.
   }
 }
 
+.mobile-search {
+  border-bottom: 3px solid $dark-color;
+  margin-bottom: 15px;
+
+  form, input {
+    margin: 0;
+  }
+}
+
 .mobile-bible-verse {
   color: inherit;
   font-style: italic;

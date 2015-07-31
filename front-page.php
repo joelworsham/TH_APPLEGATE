@@ -21,7 +21,7 @@ $buckets = get_buckets();
 		<div class="row collapse">
 			<div class="columns small-12">
 
-				<h1 class="page-title">
+				<h1 class="page-title hide-for-small">
 					<?php the_title(); ?>
 				</h1>
 

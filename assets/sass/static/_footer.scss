@@ -104,6 +104,7 @@ The static site footer.
       display: none;
       width: 100%;
       padding-right: 3px;
+      z-index: 50;
 
       .menu-item {
         &:last-of-type {

@@ -2936,7 +2936,8 @@ throughout this theme's SASS files.
       margin: 0;
       display: none;
       width: 100%;
-      padding-right: 3px; }
+      padding-right: 3px;
+      z-index: 50; }
       #site-footer .primary-nav .sub-menu .menu-item:last-of-type a {
         border-bottom: none; }
       #site-footer .primary-nav .sub-menu a {
@@ -3145,7 +3146,7 @@ body.home #home-buckets .bucket {
   z-index: 1; }
   @media only screen and (min-width:40.063em) {
     body.home #home-buckets .bucket {
-      border-bottom: 3px; } }
+      border-bottom-width: 3px; } }
   body.home #home-buckets .bucket:last-of-type {
     border-bottom-width: 3px; }
   @media only screen and (min-width:40.063em) {

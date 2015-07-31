@@ -39,11 +39,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 	</nav>
 
-	<div class="footer-menu">
+	<div class="footer-menu show-for-medium-up">
 		<div class="row">
-
-			<!-- Default footer -->
-			<div class="small-12 columns show-for-medium-up">
+			<div class="small-12 columns">
 				<?php
 				wp_nav_menu( array(
 					'theme_location' => 'footer',
@@ -53,23 +51,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 				) );
 				?>
 			</div>
+		</div>
+	</div>
 
-			<!-- Small screen footer -->
-			<div class="small-12 columns hide-for-medium-up">
-				<?php
-				require_once __DIR__ . '/includes/class-applegate-walker-footernav.php';
+	<!-- Small screen footer -->
+	<div class="footer-mobile hide-for-medium-up text-center">
+		<div class="phone">
+			<?php echo applegate_sc_phone(); ?>
+		</div>
 
-				wp_nav_menu( array(
-					'theme_location' => 'footer',
-					'container'      => false,
-					'menu_class' => 'nav-menu-small accordion',
-					'items_wrap' => '<ul id="%1$s" class="%2$s" data-accordion>%3$s</ul>',
-					'walker' => new Applegate_Walker_FooterNav(),
-					'depth' => 3,
-				) );
-				?>
-			</div>
-
+		<div class="social">
+			<a href="<?php echo get_option( 'applegate_social_facebook', '#' ); ?>" class="button expand facebook">
+				Facebook
+			</a>
+			<a href="<?php echo get_option( 'applegate_social_youtube', '#' ); ?>" class="button expand youtube">
+				YouTube
+			</a>
+			<a href="<?php echo get_option( 'applegate_social_linkedin', '#' ); ?>" class="button expand linkedin">
+				LinkedIn
+			</a>
 		</div>
 	</div>
 </footer>

@@ -2839,6 +2839,15 @@ throughout this theme's SASS files.
     #site-header .bible-verse a {
       color: inherit; }
 
+.mobile-bible-verse {
+  color: inherit;
+  font-style: italic;
+  font-size: 0.8em;
+  padding-left: 5%;
+  padding-right: 5%; }
+  .mobile-bible-verse a {
+    color: inherit; }
+
 /*
 The static site body.
 
@@ -2959,12 +2968,27 @@ throughout this theme's SASS files.
         font-weight: bold;
         cursor: default;
         font-size: 1.2em; }
-  #site-footer .nav-menu-small .accordion-navigation {
-    margin-bottom: 10px !important; }
-    #site-footer .nav-menu-small .accordion-navigation > a {
-      background: #292929; }
-    #site-footer .nav-menu-small .accordion-navigation > .content {
-      background: transparent; }
+  #site-footer .footer-mobile {
+    background: #030303;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold; }
+    #site-footer .footer-mobile a {
+      color: inherit; }
+    #site-footer .footer-mobile .social a {
+      display: block;
+      font-size: 0.8em;
+      font-weight: inherit;
+      border: none;
+      margin: 0;
+      padding-top: 0.2em;
+      padding-bottom: 0.2em; }
+      #site-footer .footer-mobile .social a.facebook {
+        background: #3B579D; }
+      #site-footer .footer-mobile .social a.youtube {
+        background: #0077B5; }
+      #site-footer .footer-mobile .social a.linkedin {
+        background: #DD2C28; }
 
 /*
 Styles page.php.
@@ -3105,84 +3129,111 @@ throughout this theme's SASS files.
 
 @since 0.1.0
 */
-body.home #home-buckets {
-  margin-top: 50px;
-  margin-bottom: 50px; }
-  body.home #home-buckets .bucket {
-    color: #F2F2F2;
-    border: 3px solid;
-    position: relative;
-    text-align: center;
-    -webkit-transition: color 300ms;
-            transition: color 300ms;
-    cursor: pointer;
-    z-index: 1; }
+@media only screen and (min-width:40.063em) {
+  body.home #home-buckets {
+    margin-top: 50px;
+    margin-bottom: 50px; } }
+body.home #home-buckets .bucket {
+  color: #F2F2F2;
+  border: 3px solid;
+  border-bottom-width: 0;
+  position: relative;
+  text-align: center;
+  -webkit-transition: color 300ms;
+          transition: color 300ms;
+  cursor: pointer;
+  z-index: 1; }
+  @media only screen and (min-width:40.063em) {
+    body.home #home-buckets .bucket {
+      border-bottom: 3px; } }
+  body.home #home-buckets .bucket:last-of-type {
+    border-bottom-width: 3px; }
+  @media only screen and (min-width:40.063em) {
+    body.home #home-buckets .bucket {
+      width: 50%; } }
+  @media only screen and (min-width:64.063em) {
+    body.home #home-buckets .bucket {
+      width: 20%; } }
+  body.home #home-buckets .bucket:hover {
+    color: #72BF44; }
     @media only screen and (min-width:40.063em) {
-      body.home #home-buckets .bucket {
-        width: 50%; } }
-    @media only screen and (min-width:64.063em) {
-      body.home #home-buckets .bucket {
-        width: 20%; } }
-    body.home #home-buckets .bucket:hover {
-      color: #72BF44; }
-      @media only screen and (min-width:40.063em) {
-        body.home #home-buckets .bucket:hover {
-          z-index: 2; } }
-      body.home #home-buckets .bucket:hover .button {
-        background: #72BF44; }
-      body.home #home-buckets .bucket:hover:nth-child(2) {
-        color: #B80611; }
-        body.home #home-buckets .bucket:hover:nth-child(2) .button {
-          background: #B80611; }
-      body.home #home-buckets .bucket:hover:nth-child(3) {
-        color: #094E96; }
-        body.home #home-buckets .bucket:hover:nth-child(3) .button {
-          background: #094E96; }
-      body.home #home-buckets .bucket:hover:nth-child(4) {
-        color: #B9771B; }
-        body.home #home-buckets .bucket:hover:nth-child(4) .button {
-          background: #B9771B; }
-      body.home #home-buckets .bucket:hover:nth-child(5) {
-        color: #4A3750; }
-        body.home #home-buckets .bucket:hover:nth-child(5) .button {
-          background: #4A3750; }
-    body.home #home-buckets .bucket .bucket-icon {
+      body.home #home-buckets .bucket:hover {
+        z-index: 2; } }
+    body.home #home-buckets .bucket:hover .button {
+      background: #72BF44; }
+    body.home #home-buckets .bucket:hover:nth-child(2) {
+      color: #B80611; }
+      body.home #home-buckets .bucket:hover:nth-child(2) .button {
+        background: #B80611; }
+    body.home #home-buckets .bucket:hover:nth-child(3) {
+      color: #094E96; }
+      body.home #home-buckets .bucket:hover:nth-child(3) .button {
+        background: #094E96; }
+    body.home #home-buckets .bucket:hover:nth-child(4) {
+      color: #B9771B; }
+      body.home #home-buckets .bucket:hover:nth-child(4) .button {
+        background: #B9771B; }
+    body.home #home-buckets .bucket:hover:nth-child(5) {
+      color: #4A3750; }
+      body.home #home-buckets .bucket:hover:nth-child(5) .button {
+        background: #4A3750; }
+  body.home #home-buckets .bucket .bucket-icon {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 50%;
+    width: 75px;
+    height: 75px;
+    margin-top: -40.5px;
+    margin-left: -37.5px;
+    border-radius: 50%;
+    background: #fff;
+    padding: 5px; }
+    @media only screen and (min-width:40.063em) {
+      body.home #home-buckets .bucket .bucket-icon {
+        display: block; } }
+    body.home #home-buckets .bucket .bucket-icon:before {
+      content: '';
       position: absolute;
-      top: 0;
-      left: 50%;
-      width: 75px;
-      height: 75px;
-      margin-top: -40.5px;
-      margin-left: -37.5px;
+      left: 10%;
+      top: 10%;
+      display: block;
+      border: 3px solid;
       border-radius: 50%;
-      background: #fff;
-      padding: 5px; }
-      body.home #home-buckets .bucket .bucket-icon:before {
-        content: '';
-        position: absolute;
-        left: 10%;
-        top: 10%;
-        display: block;
-        border: 3px solid;
-        border-radius: 50%;
-        width: 80%;
-        height: 80%; }
-      body.home #home-buckets .bucket .bucket-icon .fa {
-        display: inline-block;
-        position: relative;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-                transform: translateY(-50%);
-        font-size: 25px; }
-    body.home #home-buckets .bucket .bucket-title {
-      padding-top: 37.5px;
-      font-size: 0.8em;
-      font-weight: bold;
-      text-transform: uppercase;
-      color: #030303; }
-      body.home #home-buckets .bucket .bucket-title a {
-        color: inherit; }
+      width: 80%;
+      height: 80%; }
+    body.home #home-buckets .bucket .bucket-icon .fa {
+      display: inline-block;
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      font-size: 25px; }
+  body.home #home-buckets .bucket .bucket-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #030303;
+    float: right;
+    text-align: left;
+    width: 75%;
+    font-size: 0.6em; }
+    @media only screen and (min-width:40.063em) {
+      body.home #home-buckets .bucket .bucket-title {
+        float: none;
+        width: auto;
+        font-size: 0.8em;
+        text-align: center;
+        padding-top: 37.5px; } }
+    body.home #home-buckets .bucket .bucket-title a {
+      color: inherit; }
+  body.home #home-buckets .bucket .bucket-image {
+    float: left;
+    width: 20%; }
+    @media only screen and (min-width:40.063em) {
+      body.home #home-buckets .bucket .bucket-image {
+        width: auto;
+        float: none; } }
 body.home #home-cta .columns, body.home #home-cta #site-footer .footer-menu .nav-menu > .menu-item, #site-footer .footer-menu body.home #home-cta .nav-menu > .menu-item, body.home #home-cta .technical-documents li, .technical-documents body.home #home-cta li {
   border: 3px solid #f2f2f2;
   padding: 5px; }

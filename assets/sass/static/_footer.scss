@@ -173,16 +173,38 @@ The static site footer.
     }
   }
 
-  .nav-menu-small {
-    .accordion-navigation {
-      margin-bottom: 10px !important;
+  .footer-mobile {
+    background: $dark-color;
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
 
-      > a {
-        background: lighten($dark-color, 15%);
-      }
+    a {
+      color: inherit;
+    }
 
-      > .content {
-        background: transparent;
+    .phone {
+    }
+
+    .social {
+      a {
+        display: block;
+        font-size: 0.8em;
+        font-weight: inherit;
+        border: none;
+        margin: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+
+        &.facebook {
+          background: #3B579D;
+        }
+        &.youtube {
+          background: #0077B5;
+        }
+        &.linkedin {
+          background: #DD2C28;
+        }
       }
     }
   }

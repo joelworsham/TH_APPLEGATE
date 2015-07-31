@@ -10,17 +10,30 @@ $icon-size: 75px;
 
 body.home {
   #home-buckets {
-    margin-top: 50px;
-    margin-bottom: 50px;
+
+
+    @media #{$medium-up} {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
 
     .bucket {
       color: #F2F2F2;
       border: 3px solid;
+      border-bottom-width: 0;
       position: relative;
       text-align: center;
       transition: color 300ms;
       cursor: pointer;
       z-index: 1;
+
+      @media #{$medium-up} {
+        border-bottom: 3px;
+      }
+
+      &:last-of-type {
+        border-bottom-width: 3px;
+      }
 
       @media #{$medium-up} {
         width: 50%;
@@ -73,6 +86,7 @@ body.home {
 
       .bucket-icon {
         position: absolute;
+        display: none;
         top: 0;
         left: 50%;
         width: $icon-size;
@@ -82,6 +96,10 @@ body.home {
         border-radius: 50%;
         background: $light-color;
         padding: 5px;
+
+        @media #{$medium-up} {
+          display: block;
+        }
 
         &:before {
           content: '';
@@ -105,14 +123,34 @@ body.home {
       }
 
       .bucket-title {
-        padding-top: $icon-size / 2;
-        font-size: 0.8em;
         font-weight: bold;
         text-transform: uppercase;
         color: $dark-color;
+        float: right;
+        text-align: left;
+        width: 75%;
+        font-size: 0.6em;
+
+        @media #{$medium-up} {
+          float: none;
+          width: auto;
+          font-size: 0.8em;
+          text-align: center;
+          padding-top: $icon-size / 2;
+        }
 
         a {
           color: inherit;
+        }
+      }
+
+      .bucket-image {
+        float: left;
+        width: 20%;
+
+        @media #{$medium-up} {
+          width: auto;
+          float: none;
         }
       }
     }

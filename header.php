@@ -45,7 +45,7 @@ if ( ! isset( $_SESSION ) ) {
 				</a>
 			</div>
 
-			<div class="container medium-right small-only-text-center">
+			<div class="container medium-right small-only-text-center show-for-medium-up">
 				<div class="row">
 					<div class="columns small-12">
 						<div class="medium-right">
@@ -63,9 +63,9 @@ if ( ! isset( $_SESSION ) ) {
 
 						<div class="social medium-right">
 							<?php
-							echo applegate_sc_facebook();
-							echo applegate_sc_linkedin();
-							echo applegate_sc_youtube();
+							echo applegate_sc_facebook( get_option( 'applegate_social_facebook', '#' ) );
+							echo applegate_sc_linkedin( get_option( 'applegate_social_linkedin', '#' ) );
+							echo applegate_sc_youtube( get_option( 'applegate_social_youtube', '#' ) );
 							?>
 						</div>
 					</div>
@@ -81,6 +81,10 @@ if ( ! isset( $_SESSION ) ) {
 			</div>
 		</div>
 	</header>
+
+	<div class="mobile-bible-verse text-center hide-for-medium-up">
+		<?php dynamic_sidebar( 'header-bible-verse' ); ?>
+	</div>
 
 	<?php include __DIR__ . '/includes/partials/bucket-menu.php'; ?>
 

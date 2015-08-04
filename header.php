@@ -82,7 +82,7 @@ if ( ! isset( $_SESSION ) ) {
 		</div>
 	</header>
 
-	<div class="mobile-search">
+	<div class="mobile-search hide-for-medium-up">
 		<?php get_search_form(); ?>
 	</div>
 

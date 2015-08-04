@@ -26,6 +26,28 @@
 
     $(window).resize(youtube_embeds);
 
+    $(function () {
+
+        // Auto submit forms
+        $('form.auto-submit').each(function () {
+
+            var $inputs = $(this).find('input, select, textarea');
+
+            if ($inputs.length) {
+                $inputs.change(function () {
+
+                    var $form = $(this).closest('form.auto-submit');
+
+                    if (typeof $form.data('url') != 'undefined') {
+                        window.location.href = $(this).val();
+                    } else {
+                        $(this).closest('form.auto-submit').submit();
+                    }
+                });
+            }
+        });
+    });
+
     function youtube_embeds() {
 
         $('iframe[src*="youtube.com"]').each(function () {

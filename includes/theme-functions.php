@@ -16,6 +16,25 @@ add_filter( 'body_class', '_applegate_body_class' );
 add_filter( 'embed_oembed_html', '_applegate_youtube_embed_related_videos', 10, 4 );
 add_action( 'admin_menu', '_applegate_change_post_label' );
 add_action( 'init', '_applegate_change_post_object' );
+add_action( 'do_meta_boxes', '_applegate_change_featured_image_text' );
+add_filter( 'admin_post_thumbnail_html', 'custom_admin_post_thumbnail_html' );
+
+function _applegate_change_featured_image_text() {
+
+	remove_meta_box( 'postimagediv', 'page', 'side' );
+	add_meta_box( 'postimagediv', 'Banner Image', 'post_thumbnail_meta_box', 'page', 'side' );
+}
+
+function custom_admin_post_thumbnail_html( $content ) {
+
+	global $current_screen;
+
+	if ( $current_screen->post_type == 'page' ) {
+		return $content = str_replace( __( 'Set featured image' ), __( 'Upload Banner Image' ), $content );
+	} else {
+		return $content;
+	}
+}
 
 function _applegate_change_post_label() {
 
@@ -201,15 +220,16 @@ function applegate_post_meta() {
 	}
 	?>
 	<p class="post-meta">
-		<span class="fa fa-pencil"></span> Posted on <?php the_date(); ?> by <?php the_author(); ?> <?php echo $categories; ?>
+		<span class="fa fa-pencil"></span> Posted on <?php the_date(); ?>
+		by <?php the_author(); ?> <?php echo $categories; ?>
 	</p>
-<?php
+	<?php
 }
 
 function _applegate_youtube_embed_related_videos( $cache ) {
 
 	$search_regex = '/feature=oembed/';
-	if (preg_match($search_regex, $cache ) ) {
+	if ( preg_match( $search_regex, $cache ) ) {
 
 		$cache = preg_replace( $search_regex, 'feature=oembed&rel=0', $cache );
 	}

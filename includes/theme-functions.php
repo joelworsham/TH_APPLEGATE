@@ -90,28 +90,28 @@ function applegate_get_current_template() {
 function get_buckets() {
 
 	return $buckets = array(
-		'contractors'       => array(
+		'contractors-professionals'       => array(
 			'title'   => 'Contractors & Professionals',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'wrench',
 			'link'    => '/contractors-professionals/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'architects'        => array(
+		'architects-specifiers'        => array(
 			'title'   => 'Architects & Specifiers',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'bar-chart',
 			'link'    => '/architects-specifiers/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'buildingofficials' => array(
+		'building-officials' => array(
 			'title'   => 'Building Officials',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'building',
 			'link'    => '/building-officials/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'homeowners'        => array(
+		'home-owners'        => array(
 			'title'   => 'Home Owners',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'home',

@@ -13,7 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Require files
 require_once __DIR__ . '/pages/applegate-general.php';
-//require_once __DIR__ . '/extra-meta/contact.php';
+require_once __DIR__ . '/extra-meta/two-column.php';
+require_once __DIR__ . '/extra-meta/buckets.php';
 
 /**
  * Easy way to register a new post type!

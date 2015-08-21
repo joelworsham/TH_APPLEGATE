@@ -3078,13 +3078,13 @@ throughout this theme's SASS files.
     text-align: center;
     border-radius: 50%;
     border: 2px solid #fff; }
-  .bucket-gutter.bucket-contractors {
+  .bucket-gutter.contractors-professionals {
     background: #B80611; }
-  .bucket-gutter.bucket-architects {
+  .bucket-gutter.architects-specifiers {
     background: #094E96; }
-  .bucket-gutter.bucket-homeowners {
+  .bucket-gutter.home-owners {
     background: #4A3750; }
-  .bucket-gutter.bucket-buildingofficials {
+  .bucket-gutter.building-officials {
     background: #B9771B; }
 
 #bucket-menu {

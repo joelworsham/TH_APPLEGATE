@@ -1,8 +1,6 @@
 <?php
 /**
- * Template Name: Bucket - Building Officials
- *
- * Bucket template for building officials.
+ * Page template
  *
  * @since 0.1.0
  * @package Applegate
@@ -16,7 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Define current bucket session
-applegate_save_bucket( 'building-officials' );
+if ( $bucket = get_post_meta( get_the_ID(), 'applegate_bucket', true ) ) {
+	applegate_save_bucket( $bucket );
+}
 
 the_post();
 ?>
@@ -33,8 +33,14 @@ the_post();
 					</div>
 				<?php endif; ?>
 
-				<div class="page-copy">
-					<?php the_content(); ?>
+				<div class="page-copy row">
+					<div class="columns small-12 medium-6">
+						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_left', true ) ); ?>
+					</div>
+
+					<div class="columns small-12 medium-6">
+						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_right', true ) ); ?>
+					</div>
 				</div>
 			</div>
 

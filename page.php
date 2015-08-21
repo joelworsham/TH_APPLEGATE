@@ -1,6 +1,6 @@
 <?php
 /**
- * The theme's page file use for displaying pages.
+ * Page template
  *
  * @since 0.1.0
  * @package Applegate
@@ -13,25 +13,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 
+// Define current bucket session
+if ( $bucket = get_post_meta( get_the_ID(), 'bucket', true ) ) {
+	applegate_save_bucket( $bucket );
+}
+
 the_post();
 ?>
 
-<section id="page-<?php the_ID(); ?>" class="page-content">
-	<div class="row">
-		<div class="small-12 columns">
+	<section id="page-<?php the_ID(); ?>" <?php body_class( array( 'page-content' ) ); ?>>
+		<div class="row">
+			<div class="small-12 columns">
 
-			<h1 class="page-title">
-				<?php the_title(); ?>
-			</h1>
+				<?php applegate_show_testimonial(); ?>
 
-			<div class="page-copy">
-				<?php the_content(); ?>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<div class="page-image">
+						<?php the_post_thumbnail( 'full' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<div class="page-copy row">
+					<div class="columns small-12 medium-6">
+						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_left', true ) ); ?>
+					</div>
+
+					<div class="columns small-12 medium-6">
+						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_right', true ) ); ?>
+					</div>
+				</div>
 			</div>
 
 			<?php applegate_template( 'technical-documents' ); ?>
 		</div>
-	</div>
-</section>
+	</section>
 
 <?php
 get_footer();

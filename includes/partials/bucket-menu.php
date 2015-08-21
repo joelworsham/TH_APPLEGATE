@@ -75,15 +75,15 @@ function applegate_get_top_bucket_parent( $ID ) {
 	return $ID;
 }
 
-if ( ( $template = applegate_get_current_template() ) && strpos( $template, 'bucket-' ) !== false ): ?>
+if ( $bucket = get_post_meta( get_the_ID(), 'bucket', true ) ): ?>
 	<?php $top_level = applegate_get_top_bucket_parent( get_the_ID() ); ?>
-	<div class="bucket-gutter <?php echo $template; ?>">
+	<div class="bucket-gutter <?php echo $bucket; ?>">
 		<div class="row">
 			<div class="columns small-12">
 				<a href="<?php echo get_permalink( $top_level ); ?>">
 					<?php
 					$buckets = get_buckets();
-					$bucket  = $buckets[ str_replace( 'bucket-', '', $template ) ];
+					$bucket  = $buckets[ $bucket ];
 					echo "<span class=\"left\"><span class=\"fa fa-$bucket[icon]\"></span></span>";
 					echo $bucket['title'];
 					?>

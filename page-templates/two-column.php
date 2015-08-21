@@ -1,6 +1,6 @@
 <?php
 /**
- * Page template
+ * Template Name: Two Column
  *
  * @since 0.1.0
  * @package Applegate
@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header();
 
 // Define current bucket session
-if ( $bucket = get_post_meta( get_the_ID(), 'applegate_bucket', true ) ) {
+if ( $bucket = get_post_meta( get_the_ID(), 'bucket', true ) ) {
 	applegate_save_bucket( $bucket );
 }
 

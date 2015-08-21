@@ -16,11 +16,11 @@ add_action( 'save_post', '_applegate_save_metaboxes_two_column' );
 
 function _applegate_add_metaboxes_two_column() {
 
-	if ( get_post_type() != 'page' ) {
+	if ( get_post_meta( get_the_ID() , '_wp_page_template', true ) != 'page-templates/two-column.php' ) {
 		return;
 	}
 
-//	remove_post_type_support( 'page', 'editor' );
+	remove_post_type_support( 'page', 'editor' );
 
 	add_meta_box(
 		'column-left',

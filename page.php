@@ -33,14 +33,8 @@ the_post();
 					</div>
 				<?php endif; ?>
 
-				<div class="page-copy row">
-					<div class="columns small-12 medium-6">
-						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_left', true ) ); ?>
-					</div>
-
-					<div class="columns small-12 medium-6">
-						<?php echo apply_filters( 'the_content', get_post_meta( get_the_ID(), 'content_right', true ) ); ?>
-					</div>
+				<div class="page-copy">
+					<?php the_content(); ?>
 				</div>
 			</div>
 

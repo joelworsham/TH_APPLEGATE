@@ -236,3 +236,26 @@ function _applegate_youtube_embed_related_videos( $cache ) {
 
 	return $cache;
 }
+
+function applegate_show_testimonial() {
+
+	$testimonials = get_posts( array(
+		'post_type'   => 'testimonial',
+		'numberposts' => - 1,
+	) );
+
+	if ( ! empty( $testimonials ) ) {
+
+		$testimonial = $testimonials[ array_rand( $testimonials ) ];
+		?>
+		<div <?php post_class( array(), $testimonial->ID ); ?>>
+
+			<p class="testimonial-copy">
+				"<?php echo $testimonial->post_content; ?>"
+			</p>
+
+			<p class="testimonial-title">– <?php echo get_the_title( $testimonial->ID ); ?></p>
+		</div>
+		<?php
+	}
+}

@@ -26,3 +26,10 @@ Styles shared among all templates.
   font-style: italic;
   color: lighten($body-font-color, 40%);
 }
+
+.testimonial {
+  .testimonial-copy {
+    color: #888;
+    font-style: italic;
+  }
+}

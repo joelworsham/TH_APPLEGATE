@@ -3035,6 +3035,10 @@ throughout this theme's SASS files.
   font-style: italic;
   color: #888888; }
 
+.testimonial .testimonial-copy {
+  color: #888;
+  font-style: italic; }
+
 /*
 Styles page.php.
 

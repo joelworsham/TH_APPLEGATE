@@ -51,9 +51,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$columns = count( $footer_menu_pages );
 
 			if ( ! empty( $footer_menu_pages ) ) {
+				$i = 0;
 				foreach ( $footer_menu_pages as $page_ID ) {
 
-					echo '<ul class="footer-menu-column columns medium-' . round( 12 / $columns ) . '">';
+					$i++;
+					echo '<ul class="footer-menu-column columns medium-' .
+					     round( 12 / $columns ) .
+					     ( count( $footer_menu_pages ) == $i ? ' end' : '' ) .
+					     '">';
 
 					wp_list_pages( array(
 						'child_of' => (int) $page_ID,

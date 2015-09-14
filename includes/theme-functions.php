@@ -90,6 +90,13 @@ function applegate_get_current_template() {
 function get_buckets() {
 
 	return $buckets = array(
+		'products'        => array(
+			'title'   => 'Products',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'shopping-cart',
+			'link'    => '/products/',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
 		'contractors-professionals'       => array(
 			'title'   => 'Contractors & Professionals',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
@@ -116,13 +123,6 @@ function get_buckets() {
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'home',
 			'link'    => '/home-owners/',
-			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
-		),
-		'products'        => array(
-			'title'   => 'Products',
-			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
-			'icon'    => 'shopping-cart',
-			'link'    => '/products/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
 	);
@@ -160,6 +160,8 @@ function get_descendants( $parent_id, $post_type = 'post' ) {
 		'post_status' => 'publish',
 		'post_type'   => $post_type,
 		'post_parent' => $parent_id,
+		'orderby' => 'menu_order',
+		'order' => 'ASC',
 	) );
 
 	foreach ( $children as $child ) {

@@ -38,23 +38,23 @@ $buckets = get_buckets();
 
 		<div class="row" data-equalizer>
 
-			<div class="bucket columns small-12" data-link="/products/">
-				<div class="bucket-icon">
-					<div class="fa fa-shopping-cart"></div>
-				</div>
-
-				<h4 class="bucket-title" data-equalizer-watch>
-					<a href="/products/">
-						Products
-					</a>
-				</h4>
-
-				<div class="bucket-image">
-					<a href="/products/">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/images/mystery-man.jpg" />
-					</a>
-				</div>
-			</div>
+<!--			<div class="bucket columns small-12" data-link="/products/">-->
+<!--				<div class="bucket-icon">-->
+<!--					<div class="fa fa-shopping-cart"></div>-->
+<!--				</div>-->
+<!---->
+<!--				<h4 class="bucket-title" data-equalizer-watch>-->
+<!--					<a href="/products/">-->
+<!--						Products-->
+<!--					</a>-->
+<!--				</h4>-->
+<!---->
+<!--				<div class="bucket-image">-->
+<!--					<a href="/products/">-->
+<!--						<img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/mystery-man.jpg" />-->
+<!--					</a>-->
+<!--				</div>-->
+<!--			</div>-->
 
 			<?php foreach ( $buckets as $bucket ) : ?>
 				<div class="bucket columns small-12" data-link="<?php echo $bucket['link']; ?>">

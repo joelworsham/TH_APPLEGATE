@@ -63,9 +63,9 @@ if ( ! isset( $_SESSION ) ) {
 
 						<div class="social medium-right">
 							<?php
-							echo applegate_sc_facebook( get_option( 'applegate_social_facebook', '#' ) );
-							echo applegate_sc_linkedin( get_option( 'applegate_social_linkedin', '#' ) );
-							echo applegate_sc_youtube( get_option( 'applegate_social_youtube', '#' ) );
+							echo applegate_sc_facebook( array( 'link' => get_option( 'applegate_facebook', '#' ) ) );
+							echo applegate_sc_linkedin( array( 'link' => get_option( 'applegate_linkedin', '#' ) ) );
+							echo applegate_sc_youtube( array( 'link' => get_option( 'applegate_youtube', '#' ) ) );
 							?>
 						</div>
 					</div>

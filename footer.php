@@ -53,10 +53,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 			if ( ! empty( $footer_menu_pages ) ) {
 				foreach ( $footer_menu_pages as $page_ID ) {
 
-					echo '<ul class="footer-menu-column columns medium-' . ( 12 / $columns ) . '">';
+					echo '<ul class="footer-menu-column columns medium-' . round( 12 / $columns ) . '">';
 
 					wp_list_pages( array(
-						'child_of' => $page_ID,
+						'child_of' => (int) $page_ID,
 						'title_li' => get_the_title( $page_ID ),
 					) );
 

@@ -31,16 +31,8 @@ get_header();
 
 						// Only show if in current bucket (or if no bucket is set, show all)
 						if ( $bucket = applegate_get_bucket() ) {
-
-							if ( ! is_wp_error($category = wp_get_post_terms( get_the_ID(), 'product-bucket' )) ) {
-
-								// Only take first (should only be one set)
-								$category = $category[0];
-								$category = $category->slug;
-
-								if ( $category !== $bucket ) {
-									continue;
-								}
+							if ( ! in_array( $bucket, (array) get_post_meta( get_the_ID(), 'applegate_buckets', true ) ) ) {
+								continue;
 							}
 						}
 						?>

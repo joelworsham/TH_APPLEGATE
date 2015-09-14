@@ -90,35 +90,35 @@ function applegate_get_current_template() {
 function get_buckets() {
 
 	return $buckets = array(
-		'products'        => array(
+		'products'                  => array(
 			'title'   => 'Products',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'shopping-cart',
 			'link'    => '/products/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'contractors-professionals'       => array(
+		'contractors-professionals' => array(
 			'title'   => 'Contractors & Professionals',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'wrench',
 			'link'    => '/contractors-professionals/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'architects-specifiers'        => array(
+		'architects-specifiers'     => array(
 			'title'   => 'Architects & Specifiers',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'bar-chart',
 			'link'    => '/architects-specifiers/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'building-officials' => array(
+		'building-officials'        => array(
 			'title'   => 'Building Officials',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'building',
 			'link'    => '/building-officials/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
-		'home-owners'        => array(
+		'home-owners'               => array(
 			'title'   => 'Home Owners',
 			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
 			'icon'    => 'home',
@@ -160,8 +160,8 @@ function get_descendants( $parent_id, $post_type = 'post' ) {
 		'post_status' => 'publish',
 		'post_type'   => $post_type,
 		'post_parent' => $parent_id,
-		'orderby' => 'menu_order',
-		'order' => 'ASC',
+		'orderby'     => 'menu_order',
+		'order'       => 'ASC',
 	) );
 
 	foreach ( $children as $child ) {
@@ -267,4 +267,21 @@ function applegate_show_testimonial() {
 		</div>
 		<?php
 	}
+}
+
+add_action( 'admin_bar_menu', '_applegate_bucket_wptoolbar', 999 );
+
+function _applegate_bucket_wptoolbar( $wp_admin_bar ) {
+
+	if ( is_admin() ) {
+		return;
+	}
+
+	$bucket = applegate_get_bucket();
+
+	$args = array(
+		'id'    => 'applegate_bucket',
+		'title' => 'Current Bucket: ' . ( $bucket ? get_buckets()[ $bucket ]['title'] : 'None' ),
+	);
+	$wp_admin_bar->add_node( $args );
 }

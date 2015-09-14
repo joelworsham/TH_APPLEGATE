@@ -207,15 +207,17 @@ add_action( 'widgets_init', function () {
  *
  * @since 0.1.0
  */
-add_action( 'wp_head', function () {
+add_action( 'wp_head', '_applegate_favicon' );
+add_action( 'admin_head', '_applegate_favicon' );
+function _applegate_favicon() {
 
 	if ( ! file_exists( get_stylesheet_directory() . '/assets/images/favicon.ico' ) ) {
 		return;
 	}
 	?>
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri() . '/assets/images/favicon.ico'; ?>" />
-<?php
-});
+	<?php
+}
 
 /**
  * Loads a partial.

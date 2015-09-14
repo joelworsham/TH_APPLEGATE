@@ -16,13 +16,16 @@ add_action( 'save_post', '_applegate_save_metaboxes_buckets' );
 
 function _applegate_add_metaboxes_buckets() {
 
-	add_meta_box(
-		'bucket',
-		'Bucket',
-		'_applegate_mb_bucket',
-		'page',
-		'side'
-	);
+	foreach ( array( 'page', 'product', 'testimonial', 'faq' ) as $post_type ) {
+
+		add_meta_box(
+			'bucket',
+			'Bucket',
+			'_applegate_mb_bucket',
+			$post_type,
+			'side'
+		);
+	}
 }
 
 function _applegate_mb_bucket() {
@@ -47,7 +50,12 @@ function _applegate_mb_bucket() {
 				<option value="contractors-professionals" <?php selected( 'contractors-professionals', $selected ); ?>>
 					Contractors and Professionals
 				</option>
-				<option value="home-owners" <?php selected( 'home-owners', $selected ); ?>>Home Owners</option>
+				<option value="home-owners" <?php selected( 'home-owners', $selected ); ?>>
+					Home Owners
+				</option>
+				<option value="products" <?php selected( 'products', $selected ); ?>>
+					Products
+				</option>
 			</select>
 		</label>
 	</p>

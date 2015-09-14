@@ -3086,6 +3086,8 @@ throughout this theme's SASS files.
     background: #4A3750; }
   .bucket-gutter.building-officials {
     background: #B9771B; }
+  .bucket-gutter.products {
+    background: #72BF44; }
 
 #bucket-menu {
   margin-top: 10px; }

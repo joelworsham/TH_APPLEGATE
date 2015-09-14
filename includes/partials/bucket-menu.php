@@ -95,7 +95,7 @@ if ( $bucket = get_post_meta( get_the_ID(), 'bucket', true ) ): ?>
 	<nav id="bucket-menu">
 		<div class="row collapse">
 			<div class="small-12 columns">
-				<?php if ( $descendants = get_descendants( $top_level, 'page' ) ) : ?>
+				<?php if ( $descendants = get_descendants( $top_level, 'any' ) ) : ?>
 
 					<ul class="menu show-for-medium-up">
 						<?php applegate_bucket_menu_loop( $descendants ); ?>

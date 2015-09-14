@@ -118,6 +118,13 @@ function get_buckets() {
 			'link'    => '/home-owners/',
 			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
 		),
+		'products'        => array(
+			'title'   => 'Products',
+			'content' => '"He\'s drowned with the rest on \'em, last night," said the old Manx sailor.',
+			'icon'    => 'shopping-cart',
+			'link'    => '/products/',
+			'img'     => get_template_directory_uri() . '/assets/images/mystery-man.jpg',
+		),
 	);
 }
 
